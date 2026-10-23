@@ -1,0 +1,8 @@
+{
+  "_comment": "깃허브 ★·HF 좋아요 실측 (2026-10-23 api.github.com·huggingface.co 조회). 반영 단계에서는 아르고스 수집이 이 값을 CSV 열로 공급하는 설계.",
+  "https://github.com/alibaba/open-code-review": { "pop": 48133, "metric": "★ 48,133" },
+  "https://github.com/VoltAgent/awesome-agent-skills": { "pop": 36206, "metric": "★ 36,206" },
+  "https://github.com/different-ai/openwork": { "pop": 24233, "metric": "★ 24,233" },
+  "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731": { "pop": 4086, "metric": "♥ 4,086 · 4.3M 다운로드" },
+  "https://github.com/kelviq/tare": { "pop": 297, "metric": "★ 297" }
+}
