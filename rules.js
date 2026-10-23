@@ -36,50 +36,59 @@
 //    - 한계: 형태소 분석기가 없어서 '요청하면' '찾고' 같은 활용형은 남는다.
 
 window.RULES = {
-  version: "0.4 (DOI 접두 등급 · 2026-10-19)",
+  version: "0.5 (KB 자동 동기화 주제 · 출처 보강 · 특이 키워드 · 2026-10-23)",
 
   // ── W2 · 주제 분류 사전 ────────────────────────────────────────────
   // 주제 이름 → { en, ko, exclude }. 적힌 순서 = 화면 표시 순서 (app.js가 Object.keys로 읽음). 경계는 기획안 v3 「주제 5개」 표를 따른다.
   topics: {
-    "AI 에이전트": {
-      // 에이전트 제품·프레임워크, 도구 호출, 에이전트 프로토콜. 모델 자체 출시는 파운데이션 모델로.
-      en: ["ai agent", "ai agents", "agentic", "agent", "agents", "multi-agent", "coding agent",
-           "computer use", "browser agent", "mcp", "model context protocol", "a2a", "tool calling", "tool use"],
-      ko: ["에이전트", "에이전틱", "멀티에이전트", "도구 호출"],
+    // ★ 자동 생성 블록 — 키워드설정.md(공용 KB)에서 sync_monitor_topics.py가 재생성 (2026-10-23)
+    // 직접 고치지 말 것: 키워드는 KB의 그룹별 en:/ko:/exclude: 항목에서 고친다.
+    "LLM 분류·오류 예측": {
+      // KB 그룹 llm_classification
+      en: ["classification", "classifier", "classify", "hallucination", "hallucinations", "misclassification", "error detection", "error prediction", "uncertainty", "confidence", "calibration", "annotation", "labeling", "evaluating", "evaluation", "llm-as-a-judge"],
+      ko: ["분류", "환각", "오류 예측", "불확실성", "라벨링"],
+      exclude: []
+    },
+    "조직 AI 수용": {
+      // KB 그룹 ai_adoption
+      en: ["adoption", "acceptance", "utaut", "technology acceptance", "intention", "intentions", "continuance intention", "behavioral intention", "perceived usefulness", "perceived ease of use", "willingness", "resistance", "structural equation", "predictors", "predicting", "determinants", "drivers"],
+      ko: ["수용", "기술수용", "사용의도", "수용의도", "지속사용", "저항"],
+      exclude: []
+    },
+    "데이터·AI 거버넌스": {
+      // KB 그룹 governance
+      en: ["governance", "data quality", "data management", "master data", "metadata", "data catalog", "stewardship", "lineage", "compliance", "responsible ai", "responsible", "accountability", "transparency", "regulation", "regulatory", "ai act", "risk management", "ethics", "ethical", "data spaces"],
+      ko: ["거버넌스", "데이터 품질", "마스터데이터", "메타데이터", "컴플라이언스", "규제", "윤리"],
+      exclude: []
+    },
+    "AI 역량·AX": {
+      // KB 그룹 capability
+      en: ["capability", "capabilities", "maturity", "readiness", "digital transformation", "dynamic capabilities", "absorptive capacity", "firm performance", "organizational performance", "competitive advantage", "innovation performance", "ai-driven", "upskilling", "reskilling", "digital competence"],
+      ko: ["역량", "성숙도", "디지털 전환", "디지털전환", "준비도"],
+      exclude: []
+    },
+    "데이터·AI 보안": {
+      // KB 그룹 security
+      en: ["security", "cybersecurity", "privacy", "data protection", "access control", "anonymization", "forensic", "federated", "phishing", "sensitive data"],
+      ko: ["보안", "개인정보", "프라이버시"],
+      exclude: []
+    },
+    "응용·확장": {
+      // KB 그룹 extended
+      en: ["sentiment analysis", "sentiment", "multimodal", "ecosystem", "complementor", "self-evolving", "digital business"],
+      ko: ["감성분석", "생태계"],
+      exclude: []
+    },
+    "AI 에이전트·엔지니어링": {
+      // KB 그룹 agents_engineering
+      en: ["ai agent", "ai agents", "agentic", "agent", "agents", "multi-agent", "coding agent", "computer use", "browser agent", "mcp", "model context protocol", "a2a", "tool calling", "tool use", "rag", "retrieval augmented generation", "retrieval-augmented", "prompt", "prompt engineering", "context engineering", "fine-tuning", "finetuning", "orchestration", "workflow", "llmops"],
+      ko: ["에이전트", "에이전틱", "멀티에이전트", "도구 호출", "프롬프트", "파인튜닝", "오케스트레이션", "하네스"],
       exclude: ["travel agent", "real estate agent", "secret agent", "free agent", "fbi agent", "insurance agent"]
     },
-    "AI 윤리·안전·거버넌스": {
-      // 편향·안전성·정렬, 법·규제, 정부·국제기구 가이드라인. 교육 현장의 윤리 교육은 리터러시·교육으로.
-      en: ["ai safety", "safety", "ethics", "ethical", "bias", "biased", "alignment", "deepfake", "deepfakes",
-           "misinformation", "disinformation", "guardrail", "guardrails", "regulation", "regulations",
-           "regulator", "regulators", "regulatory", "ai act", "governance", "lawsuit", "copyright",
-           "privacy", "executive order", "accountability", "transparency", "white house", "lawmakers", "watermark", "watermarking", "oversight"],
-      ko: ["윤리", "안전", "편향", "딥페이크", "허위정보", "가짜뉴스", "규제", "기본법", "법안", "입법",
-           "거버넌스", "가이드라인", "저작권", "개인정보", "책임성", "투명성", "워터마크", "고영향", "소송"],
-      exclude: []
-    },
-    "AI 리터러시·교육": {
-      // AI 활용 교육, 교사·학생의 AI 사용, 리터러시 측정. 'learning'은 머신러닝과 겹쳐서 넣지 않음.
-      en: ["literacy", "education", "educational", "educator", "educators", "school", "schools", "student",
-           "students", "teacher", "teachers", "classroom", "classrooms", "curriculum", "university",
-           "universities", "edtech", "tutor", "tutoring"],
-      ko: ["리터러시", "교육", "학교", "학생", "교사", "교실", "수업", "대학", "교과서", "디지털교과서", "에듀테크", "디지털 리터러시", "튜터"],
-      exclude: ["teacher model", "student model", "teacher-student"]
-    },
-    "피지컬 AI·로보틱스": {
-      // 휴머노이드, 로봇 기초 모델, 자율주행·제조 현장 AI.
-      en: ["robot", "robots", "robotic", "robotics", "humanoid", "humanoids", "physical ai", "embodied",
-           "autonomous driving", "self-driving", "robotaxi", "robotaxis", "drone", "drones", "lerobot", "vla", "vision-language-action", "video-action"],
-      ko: ["로봇", "휴머노이드", "피지컬", "자율주행", "로보택시", "드론"],
-      exclude: []
-    },
-    "파운데이션 모델": {
-      // 상용·오픈 웨이트 모델의 출시, 성능·벤치마크, 가격·라이선스, 지원 중단. 모델을 쓴 응용 사례는 해당 응용 주제로.
-      en: ["foundation model", "foundation models", "large language model", "large language models", "llm", "llms",
-           "language model", "open-weight", "open-weights", "open weights", "gpt", "chatgpt", "claude", "gemini", "gemma",
-           "llama", "qwen", "qwen3", "deepseek", "mistral", "grok", "kimi", "glm", "nemotron", "benchmark", "benchmarks"],
-      ko: ["거대언어모델", "대규모 언어모델", "언어모델", "파운데이션 모델", "오픈소스 모델", "챗gpt",
-           "클로드", "제미나이", "딥시크", "큐원", "네모트론", "벤치마크"],
+    "모델·서비스 동향": {
+      // KB 그룹 model_service_trends
+      en: ["foundation model", "foundation models", "open-weight", "open-weights", "open weights", "gpt", "chatgpt", "claude", "gemini", "gemma", "llama", "qwen", "deepseek", "mistral", "grok", "kimi", "glm", "nemotron", "benchmark", "benchmarks", "openai", "anthropic", "nvidia", "hugging face", "startup", "launch", "launches", "release", "releases", "frontier", "tts", "text-to-speech"],
+      ko: ["출시", "공개", "오픈소스", "오픈 웨이트", "오픈웨이트", "스타트업", "챗gpt", "클로드", "제미나이", "딥시크", "큐원", "네모트론", "프런티어", "벤치마크"],
       exclude: []
     }
   },
@@ -89,6 +98,39 @@ window.RULES = {
   // oa: 원문을 무료로 볼 수 있으면 true. 유료 논문은 중요도 상위에 오르기 전에 사람이 확인한다.
   gradeWeight: { A: 3, B: 2, C: 1, D: 0.5 },
   unknownGrade: "C",
+
+  // 출처 유형 그룹: 등급표 줄의 type을 '먼저 읽을 것' 구분용 6가지로 묶는다. 어디에도 없으면 "기타".
+  sourceKinds: {
+    "논문": ["학술지", "학회 논문", "학술지·학회", "프리프린트", "정부 학술 DB", "학술 단행본", "학위논문", "학생 학술지", "연구 저장소", "학술 행사 공고"],
+    "공공·기관": ["정부", "국제기구", "정부 연구기관", "기관 분석", "대학 홍보", "법률 출판 플랫폼"],
+    "언론": ["주요 언론", "전문 언론", "인터넷 언론", "지역 인터넷 언론", "작은 인터넷 매체", "포털 재전송"],
+    "코드·모델": ["코드 저장소", "모델 저장소", "기업 발표·모델 저장소", "벤치마크 발표", "상업 벤치마크"],
+    "기업": ["기업 발표", "기업 블로그", "기업 서비스", "기업 기술문서"],
+    "전문가·커뮤니티": ["전문가 블로그", "전문가 글", "전문가 뉴스레터", "커뮤니티"]
+  },
+  // '먼저 읽을 것'에서 빼는 유형 — 언론 기사는 흐름 파악용이지 정독 대상이 아님 (2026-10-23 유경)
+  readExcludeKinds: ["언론"],
+
+  // ── 특이 키워드 ('특이 키워드' 표와 '키워드 연결망'의 기준) ──
+  // 순위 = 기간 내 기사 수 × log(1 + 전체 건수 ÷ 전체 기간 문서빈도) — 어디에나 나오는 말은 가라앉는다.
+  // stopEn/stopKo: 학술 상투어·기능어. 집계 전에 거른다 (키워드 추출 자체는 keywords 절의 규칙).
+  distinct: {
+    stopEn: ["ai", "artificial", "intelligence", "generative", "llm", "llms", "large", "language", "model", "models",
+      "machine", "learning", "deep", "data", "digital", "analysis", "approach", "approaches", "based", "beyond",
+      "case", "comparative", "comprehensive", "design", "development", "driven", "dynamic", "effect", "effects",
+      "empirical", "enhancing", "era", "evidence", "exploring", "factors", "framework", "frameworks", "future",
+      "impact", "impacts", "implications", "improving", "influence", "insights", "integration", "integrating",
+      "intelligent", "leveraging", "management", "method", "methods", "new", "novel", "performance", "perspective",
+      "perspectives", "research", "review", "role", "study", "studies", "survey", "system", "systems", "systematic",
+      "technology", "technologies", "through", "toward", "towards", "understanding", "using", "via",
+      "ability", "across", "affect", "among", "between", "during", "human", "under", "over", "into", "within",
+      "without", "versus", "how", "what", "when", "why", "does", "can", "could", "will", "would", "their", "there",
+      "these", "those", "this", "that", "from", "with", "more", "most"],
+    stopKo: ["연구", "분석", "활용", "기반", "방안", "영향", "사례", "전략", "기술", "산업", "시대", "도입", "개발",
+      "구축", "확대", "강화", "지원", "추진", "성료", "변화"],
+    graphTop: 18,      // 연결망에 올리는 특이 키워드 수
+    graphMinCo: 2      // 선을 긋는 최소 동시 등장 기사 수 (연결이 너무 적으면 1로 완화)
+  },
 
   sources: [
     // A · 동료심사 학술지·학회 (오픈 액세스)
@@ -290,7 +332,22 @@ window.RULES = {
     { domain: "jvns.ca", type: "전문가 블로그", grade: "C", oa: true, reason: "개발자 개인 블로그 · 검증 절차 없음" },
     { domain: "matklad.github.io", type: "전문가 블로그", grade: "C", oa: true, reason: "개발자 개인 블로그 · 검증 절차 없음" },
     // D · 심사 신뢰가 어려운 출판사
-    { domain: "globaljournals.org", type: "학술지", grade: "D", oa: true, reason: "약탈적 출판사 의심 목록에 자주 오르는 곳 · 심사를 신뢰하기 어려움 〔팀원 확인〕" }
+    { domain: "globaljournals.org", type: "학술지", grade: "D", oa: true, reason: "약탈적 출판사 의심 목록에 자주 오르는 곳 · 심사를 신뢰하기 어려움 〔팀원 확인〕" },
+    // ── v0.5 초안 · 유경 수집물(헤르메스·아르고스 210건)의 미등록 출처 보강 (발행처를 확인한 것만 — 무명 학술지는 미등록 C로 남겨 보강 후보에 둔다)
+    { domain: "doi.org", pathPrefix: "/10.1609/", type: "학회 논문", grade: "A", oa: true, reason: "DOI 10.1609 = AAAI 동료심사 학회 논문집" },
+    { domain: "doi.org", pathPrefix: "/10.1057/", type: "학술지", grade: "A", oa: false, reason: "DOI 10.1057 = Palgrave Macmillan(Springer Nature) 동료심사 학술지 · 원문 유료인 경우 많음" },
+    { domain: "doi.org", pathPrefix: "/10.24425/", type: "학술지", grade: "A", oa: true, reason: "DOI 10.24425 = 폴란드 과학아카데미(PAS) 동료심사 학술지" },
+    { domain: "doi.org", pathPrefix: "/10.4018/", type: "학술지", grade: "A", oa: false, reason: "DOI 10.4018 = IGI Global 동료심사 학술지 · 학술지별 심사 수준 편차 있어 확인 필요" },
+    { domain: "doi.org", pathPrefix: "/10.31234/", type: "프리프린트", grade: "B", oa: true, reason: "DOI 10.31234 = PsyArXiv(OSF) 심사 전 논문 · 원문 무료" },
+    { domain: "doi.org", pathPrefix: "/10.38124/", type: "학술지", grade: "C", oa: true, reason: "DOI 10.38124 = IJISRT · 심사 기준을 확인하기 어려운 오픈 액세스 저널" },
+    { domain: "doi.org", pathPrefix: "/10.5539/", type: "학술지", grade: "C", oa: true, reason: "DOI 10.5539 = CCSE · 심사 수준 논란이 있는 출판사" },
+    { domain: "economist.com", type: "주요 언론", grade: "B", oa: false, reason: "국제 시사 주간지 · 편집 검증 있음 · 원문 유료" },
+    { domain: "404media.co", type: "작은 인터넷 매체", grade: "C", oa: false, reason: "기자들이 만든 독립 기술 매체 · 편집 규모 작음" },
+    { domain: "langchain.com", type: "기업 블로그", grade: "C", oa: true, reason: "LangChain 자사 제품 블로그 · 이해관계 있음" },
+    { domain: "claude.com", type: "기업 발표", grade: "C", oa: true, reason: "Anthropic 제품 페이지 · 이해관계 있음" },
+    { domain: "learnvector.ai", type: "기업 서비스", grade: "C", oa: true, reason: "교육 서비스 자사 소개 · 이해관계 있음" },
+    { domain: "danluu.com", type: "전문가 글", grade: "C", oa: true, reason: "소프트웨어 엔지니어 개인 블로그 · 저자 전문성 알려짐" },
+    { domain: "vcresearch.berkeley.edu", type: "대학 홍보", grade: "C", oa: true, reason: "UC Berkeley 연구 홍보 페이지 · 기관 발표 성격" },
   ],
 
   // ── 중요도 ─────────────────────────────────────────────────────────
