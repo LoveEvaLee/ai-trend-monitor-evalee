@@ -1,107 +1,105 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI 동향 모니터</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 동향 모니터 — 연구 축</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="page-head">
-    <h1>AI 동향 모니터</h1>
-    <p class="sub">기사·논문 목록(CSV)을 넣으면 <code>rules.js</code> 기준으로 5개 주제로 나눠 보여 줍니다.</p>
-  </header>
+<div class="wrap">
+  <section class="hero">
+    <div class="row"><span class="eyebrow">AI 동향 모니터 · 연구 축 고도화판 (중간과제)</span></div>
+    <h1>내 연구 축에서 이번 주 무엇을 읽고, 무엇이 비어 있나</h1>
+    <div class="meta" id="meta"></div>
+  </section>
 
-  <main>
-    <!-- 입력 -->
-    <section id="input" class="panel">
-      <h2>입력</h2>
-      <p class="hint">형식: <code>date,title,url,source</code> · 첫 줄은 머리글</p>
-      <textarea id="csv-input" rows="6" placeholder="date,title,url,source&#10;2026-10-16,(기사 제목),https://...,example.com"></textarea>
-      <div class="actions">
-        <label class="btn">파일 선택<input id="csv-file" type="file" accept=".csv,text/csv" hidden></label>
-        <button id="load-example" type="button" class="btn">예시 불러오기</button>
-        <button id="run" type="button" class="btn primary">분석</button>
-        <span id="input-status" class="status" role="status"></span>
-      </div>
-    </section>
-
-    <!-- 1. 요약 숫자 -->
-    <section id="summary" class="panel" aria-label="요약 숫자">
-      <div class="stats">
-        <div class="stat"><span class="label">총 건수</span><span id="stat-total" class="value">–</span></div>
-        <div class="stat"><span class="label">분류됨</span><span id="stat-classified" class="value">–</span></div>
-        <div class="stat"><span class="label">미분류</span><span id="stat-unclassified" class="value">–</span></div>
-        <div class="stat"><span class="label">건너뛴 줄</span><span id="stat-skipped" class="value">–</span></div>
-      </div>
-      <p id="skipped-lines" class="hint"></p>
-    </section>
-
+  <section class="card" aria-labelledby="h-input">
+    <header><h2 id="h-input">입력</h2><span class="question">형식: date,title,url,source · 첫 줄은 머리글 · UTF-8</span></header>
+    <textarea id="csv-input" rows="5" spellcheck="false" placeholder="CSV를 붙여 넣으세요. 배포 주소에서는 data/latest.csv를 자동으로 읽습니다."></textarea>
     <div class="row">
-      <!-- 2. 주제별 개수 -->
-      <section id="topic-counts" class="panel">
-        <h2>주제별 개수</h2>
-        <div class="slot" data-owner="B · js/charts.js">막대 5개 + 미분류. 막대를 누르면 추이에 함께 표시</div>
-      </section>
-
-      <!-- 3. 주별 추이 -->
-      <section id="weekly-trend" class="panel">
-        <h2>주별 추이</h2>
-        <div class="slot" data-owner="B · js/charts.js">주제별 꺾은선 · 주 시작일(월) 기준 · 덜 찬 마지막 주는 점선</div>
-      </section>
+      <label class="btn" for="csv-file">파일 선택<input type="file" id="csv-file" accept=".csv,text/csv" hidden></label>
+      <button class="btn" id="load-example">예시 불러오기</button>
+      <button class="btn primary" id="run">분석</button>
+      <span class="muted" id="input-status" style="font-size:.82rem"></span>
     </div>
+  </section>
 
-    <!-- 4. 주제별 중요도 순위 그리드 -->
-    <section id="importance-grid" class="panel">
-      <h2>주제별 중요도 순위</h2>
-      <div class="slot" data-owner="B · js/grid.js">주제 카드 5장 · 카드마다 상위 5건(날짜·제목·출처·등급·점수) · 등급에 근거 표시</div>
+  <section class="card" aria-labelledby="h-topic">
+    <header><h2 id="h-topic">주제별 이번 주 흐름</h2><span class="selbadge" id="b-topic"></span><span class="question">카드를 누르면 아래 전체(읽을 것 · 추이 · 키워드 · 연결망 · 순위)가 그 주제로 바뀝니다 · 다시 누르면 해제</span></header>
+    <p class="digest" id="digest"></p>
+    <div class="topics" id="topics"></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-read">
+    <header><h2 id="h-read">먼저 읽을 것</h2><span class="selbadge" id="b-read"></span><span class="question" id="reads-q"></span></header>
+    <div class="tabs" id="kind-tabs" role="tablist" aria-label="출처 유형"></div>
+    <div class="reads" id="reads"></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-inst">
+    <header><h2 id="h-inst">깔아볼 것</h2><span class="selbadge" id="b-inst"></span><span class="question" id="inst-q"></span></header>
+    <div class="tabs" id="inst-tabs" role="tablist" aria-label="깔아볼 것 정렬"></div>
+    <div class="reads" id="installs" style="grid-template-columns: repeat(3, minmax(0, 1fr))"></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-trend">
+      <header><h2 id="h-trend">주별 추이</h2><span class="selbadge" id="b-trend"></span><span class="question">주 시작일(월) 기준 · 점선 끝 = 7일이 덜 찬 마지막 주</span></header>
+      <div class="legend" id="legend" role="group" aria-label="추이에 보일 주제"></div>
+      <svg id="trend" viewBox="0 0 640 260" role="img" aria-label="주제별 주간 건수 꺾은선"></svg>
     </section>
-
-    <!-- 5. 기간별 키워드 순위 -->
-    <section id="keyword-rank" class="panel">
-      <h2>기간별 키워드 순위</h2>
-      <div class="tabs" role="tablist">
-        <button type="button" role="tab" data-window="90d" aria-selected="true">90일</button>
-        <button type="button" role="tab" data-window="30d" aria-selected="false">30일</button>
-        <button type="button" role="tab" data-window="7d" aria-selected="false">7일</button>
-        <button type="button" role="tab" data-window="1d" aria-selected="false">전날</button>
-      </div>
-      <div id="keyword-table" class="slot" data-owner="B · js/grid.js">상위 10개 키워드 · 건수 · 직전 같은 기간 대비 증감</div>
+    <section class="card" aria-labelledby="h-kw">
+      <header><h2 id="h-kw">특이 키워드</h2><span class="selbadge" id="b-kw"></span><span class="question">기간 건수 × 전체 희소성</span></header>
+      <div class="tabs" role="tablist" id="kw-tabs"></div>
+      <div class="tbl"><table><thead><tr><th>#</th><th>키워드</th><th class="n">건수</th><th class="n">증감</th></tr></thead><tbody id="kw"></tbody></table></div>
+      <p class="muted" style="font-size:.78rem;margin:0">순위 = 기간 내 기사 수 × log(전체 희소성). 흔한 말은 불용어(rules.js distinct)와 희소성 가중으로 가라앉습니다.</p>
     </section>
+  </div>
 
-    <!-- + 미분류 목록 -->
-    <section id="unclassified" class="panel">
-      <h2>미분류 목록</h2>
-      <div class="slot" data-owner="B · js/grid.js">어느 주제에도 안 걸린 기사 → 분류 사전 보강 후보</div>
-    </section>
+  <section class="card" aria-labelledby="h-net">
+    <header><h2 id="h-net">키워드 연결망</h2><span class="selbadge" id="b-net"></span><span class="question">같은 기사에 함께 나온 특이 키워드를 잇습니다 · 기간은 왼쪽 키워드 탭을 따름 · 점을 누르면 이웃만 밝게</span></header>
+    <svg id="net" viewBox="0 0 960 420" role="img" aria-label="키워드 동시 등장 연결망"></svg>
+    <p class="muted" style="font-size:.78rem;margin:0" id="net-note"></p>
+  </section>
 
-    <!-- 내보내기 -->
-    <section id="export" class="panel">
-      <h2>내보내기</h2>
-      <div class="actions">
-        <button id="export-csv" type="button" class="btn" disabled>CSV</button>
-        <button id="export-md" type="button" class="btn" disabled>마크다운</button>
-      </div>
-    </section>
-  </main>
+  <section class="card" aria-labelledby="h-grid">
+    <header><h2 id="h-grid">주제별 중요도 상위 3</h2><span class="selbadge" id="b-grid"></span><span class="question">점수 = 등급 가중치 × (1 + 비슷한 기사) × 최신성 · 등급에 마우스를 올리면 근거</span></header>
+    <div class="grid5" id="grid"></div>
+  </section>
 
-  <footer class="page-foot">
-    <p>기준일은 입력 데이터의 마지막 날짜 · 도구 안에서 AI를 부르지 않고 규칙으로만 계산</p>
+  <section class="card" aria-labelledby="h-unc">
+    <header><h2 id="h-unc">아직 놓치는 것 (미분류)</h2><span class="question">rules.js 주제 사전에 키워드를 더할 후보</span></header>
+    <details class="unc-fold">
+      <summary id="unc-sum"></summary>
+      <div class="unc" id="unc"></div>
+    </details>
+  </section>
+
+  <section class="card" aria-labelledby="h-exp">
+    <header><h2 id="h-exp">내보내기</h2><span class="question">CSV는 다시 넣으면 같은 결과 · 마크다운은 요약 보고용</span></header>
+    <div class="row">
+      <button class="btn" id="export-csv" disabled>CSV</button>
+      <button class="btn" id="export-md" disabled>마크다운</button>
+    </div>
+  </section>
+
+  <footer class="src">
+    <span>판단 기준은 전부 <span class="mono">rules.js</span> — 주제 사전은 공용 KB(키워드설정.md)에서 <span class="mono">scripts/sync_topics.py</span>가 자동 생성</span>
+    <span>요약 문단(큐레이터 메모)·인기 지표(★/♥)는 수집 파이프라인이 <span class="mono">data/weekly_note.md</span> · <span class="mono">data/popularity.json</span>으로 공급 — 없으면 자동 요약·점수순으로 동작</span>
+    <span>서버 없음 · 도구 안 AI 호출 없음 · 같은 입력이면 언제나 같은 결과</span>
   </footer>
+</div>
 
-  <!-- 기준 파일 (공동 · #5) -->
-  <script src="rules.js"></script>
-  <!-- 예시 입력 (공동 · #6). 더블클릭으로 열면 브라우저가 CSV를 직접 못 읽어서 js로도 둔다 -->
-  <script src="data/example.js"></script>
-  <!-- A: 데이터 처리 -->
-  <script src="js/import.js"></script>
-  <script src="js/classify.js"></script>
-  <script src="js/keywords.js"></script>
-  <!-- B: 화면 -->
-  <script src="js/charts.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/export.js"></script>
-  <!-- 연결 (공동) -->
-  <script src="js/app.js"></script>
+<script src="rules.js"></script>
+<script src="data/example.js"></script>
+<script src="js/import.js"></script>
+<script src="js/classify.js"></script>
+<script src="js/keywords.js"></script>
+<script src="js/export.js"></script>
+<script src="js/view.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
