@@ -17,14 +17,19 @@
   </section>
 
   <section class="card" aria-labelledby="h-input">
-    <header><h2 id="h-input">입력</h2><span class="question">형식: date,title,url,source · 첫 줄은 머리글 · UTF-8</span></header>
-    <textarea id="csv-input" rows="5" spellcheck="false" placeholder="CSV를 붙여 넣으세요. 배포 주소에서는 data/latest.csv를 자동으로 읽습니다."></textarea>
-    <div class="row">
-      <label class="btn" for="csv-file">파일 선택<input type="file" id="csv-file" accept=".csv,text/csv" hidden></label>
-      <button class="btn" id="load-example">예시 불러오기</button>
-      <button class="btn primary" id="run">분석</button>
-      <span class="muted" id="input-status" style="font-size:.82rem"></span>
-    </div>
+    <header><h2 id="h-input">입력</h2><span class="question">평소에는 수집 파이프라인이 공급한 data/latest.csv를 자동으로 읽습니다 — 직접 넣을 때만 펼치세요</span></header>
+    <details class="unc-fold">
+      <summary>CSV 직접 넣기 (붙여넣기 · 파일 · 예시) — 형식: date,title,url,source</summary>
+      <div style="display:grid;gap:10px;margin-top:10px">
+        <textarea id="csv-input" rows="5" spellcheck="false" placeholder="CSV를 붙여 넣으세요."></textarea>
+        <div class="row">
+          <label class="btn" for="csv-file">파일 선택<input type="file" id="csv-file" accept=".csv,text/csv" hidden></label>
+          <button class="btn" id="load-example">예시 불러오기</button>
+          <button class="btn primary" id="run">분석</button>
+        </div>
+      </div>
+    </details>
+    <span class="muted" id="input-status" style="font-size:.82rem"></span>
   </section>
 
   <section class="card" aria-labelledby="h-topic">
