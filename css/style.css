@@ -63,6 +63,10 @@ textarea { width: 100%; resize: vertical; border: 1px solid var(--line); border-
 .digest { margin: 0; font-size: .92rem; color: var(--ink); background: var(--soft); border-radius: 10px; padding: 9px 14px; }
 .digest .num { font-weight: 600; }
 
+.digest.delta { background: var(--track); font-size: .85rem; color: var(--body); }
+.digest.delta b { color: var(--ink); }
+.pill select { font: inherit; font-size: .78rem; border: none; background: transparent; color: var(--ink); cursor: pointer; }
+
 /* 주제 카드 (관제판) */
 .topics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .topic { border-radius: 12px; padding: 12px 14px; background: color-mix(in srgb, var(--tc) 9%, var(--card)); border: 1px solid color-mix(in srgb, var(--tc) 22%, transparent); display: grid; gap: 6px; min-width: 0; cursor: pointer; transition: opacity .15s, box-shadow .15s; }

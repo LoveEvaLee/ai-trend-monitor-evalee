@@ -6,7 +6,7 @@
 <title>AI 동향 모니터 — 연구 축</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/style.css?v=0.5.3">
+<link rel="stylesheet" href="css/style.css?v=0.5.4">
 </head>
 <body>
 <div class="wrap">
@@ -14,6 +14,7 @@
     <div class="row"><span class="eyebrow">AI 동향 모니터 · 연구 축 고도화판 (중간과제)</span></div>
     <h1>내 연구 축에서 이번 주 무엇을 읽고, 무엇이 비어 있나</h1>
     <div class="meta" id="meta"></div>
+    <div class="row"><label class="pill">지난 호 보기 <select id="issue-sel"><option value="">최신 호 (latest)</option></select></label></div>
   </section>
 
   <section class="card" aria-labelledby="h-input">
@@ -35,6 +36,7 @@
   <section class="card" aria-labelledby="h-topic">
     <header><h2 id="h-topic">주제별 이번 주 흐름</h2><span class="selbadge" id="b-topic"></span><span class="question">카드를 누르면 아래 전체(읽을 것 · 추이 · 키워드 · 연결망 · 순위)가 그 주제로 바뀝니다 · 다시 누르면 해제</span></header>
     <p class="digest" id="digest"></p>
+    <p class="digest delta" id="delta" style="display:none"></p>
     <div class="topics" id="topics"></div>
   </section>
 
@@ -98,13 +100,13 @@
   </footer>
 </div>
 
-<script src="rules.js?v=0.5.3"></script>
-<script src="data/example.js?v=0.5.3"></script>
-<script src="js/import.js?v=0.5.3"></script>
-<script src="js/classify.js?v=0.5.3"></script>
-<script src="js/keywords.js?v=0.5.3"></script>
-<script src="js/export.js?v=0.5.3"></script>
-<script src="js/view.js?v=0.5.3"></script>
-<script src="js/app.js?v=0.5.3"></script>
+<script src="rules.js?v=0.5.4"></script>
+<script src="data/example.js?v=0.5.4"></script>
+<script src="js/import.js?v=0.5.4"></script>
+<script src="js/classify.js?v=0.5.4"></script>
+<script src="js/keywords.js?v=0.5.4"></script>
+<script src="js/export.js?v=0.5.4"></script>
+<script src="js/view.js?v=0.5.4"></script>
+<script src="js/app.js?v=0.5.4"></script>
 </body>
 </html>

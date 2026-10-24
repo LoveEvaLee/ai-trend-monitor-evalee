@@ -5,8 +5,8 @@
 //   data/popularity.json — url → { pop, metric } (깃허브 ★ · HF 좋아요). '깔아볼 것' 정렬에 쓴다
 (function () {
   var $ = function (sel) { return document.querySelector(sel); };
-  var state = { items: [], stats: null, baseDate: null, fromLatest: false };
-  var supplied = { weeklyNote: null, topicNotes: {}, popMap: {} };
+  var state = { items: [], stats: null, baseDate: null, fromLatest: false, noteSet: null };
+  var supplied = { weeklyNote: null, topicNotes: {}, popMap: {}, issues: [], prevItems: null };
 
   function status(msg) { $("#input-status").textContent = msg; }
 
@@ -29,10 +29,12 @@
       skipped: parsed.skipped
     };
 
+    var noteSet = state.noteSet || (state.fromLatest ? { weeklyNote: supplied.weeklyNote, topicNotes: supplied.topicNotes } : null);
     ATM.renderAll(items, state.stats, {
-      weeklyNote: state.fromLatest ? supplied.weeklyNote : null,
-      topicNotes: state.fromLatest ? supplied.topicNotes : {},
-      popMap: supplied.popMap
+      weeklyNote: noteSet ? noteSet.weeklyNote : null,
+      topicNotes: noteSet ? noteSet.topicNotes : {},
+      popMap: supplied.popMap,
+      prevIssue: state.fromLatest ? supplied.prevIssue : null   // 지난 호 비교(델타 브리핑)
     });
 
     $("#export-csv").disabled = $("#export-md").disabled = items.length === 0;
@@ -49,11 +51,11 @@
     URL.revokeObjectURL(url);
   }
 
-  $("#run").addEventListener("click", function () { state.fromLatest = false; run(); });
+  $("#run").addEventListener("click", function () { state.fromLatest = false; state.noteSet = null; run(); });
 
   $("#load-example").addEventListener("click", function () {
     if (!window.EXAMPLE_CSV) { status("예시 입력이 아직 없습니다."); return; }
-    state.fromLatest = false;
+    state.fromLatest = false; state.noteSet = null;
     $("#csv-input").value = EXAMPLE_CSV;
     run();
   });
@@ -62,7 +64,7 @@
     var file = e.target.files[0];
     if (!file) return;
     var reader = new FileReader();
-    reader.onload = function () { state.fromLatest = false; $("#csv-input").value = reader.result; run(); };
+    reader.onload = function () { state.fromLatest = false; state.noteSet = null; $("#csv-input").value = reader.result; run(); };
     reader.readAsText(file, "utf-8");
   });
 
@@ -78,18 +80,60 @@
   function fetchText(path) {
     return fetch(path, { cache: "no-store" }).then(function (r) { return r.ok ? r.text() : Promise.reject(r.status); });
   }
+  function parseNote(raw) {
+    var parts = raw.trim().split(/^## /m), tn = {};
+    parts.slice(1).forEach(function (p) { var nl = p.indexOf("\n"); tn[p.slice(0, nl).trim()] = p.slice(nl + 1).trim(); });
+    return { weeklyNote: parts[0].trim() || null, topicNotes: tn };
+  }
   function loadSupplied() {
     if (!/^https?:$/.test(location.protocol) || !window.fetch) return Promise.resolve();
     var p1 = fetchText("data/weekly_note.md").then(function (raw) {
-      var parts = raw.trim().split(/^## /m);
-      supplied.weeklyNote = parts[0].trim() || null;
-      parts.slice(1).forEach(function (p) { var nl = p.indexOf("\n"); supplied.topicNotes[p.slice(0, nl).trim()] = p.slice(nl + 1).trim(); });
+      var n = parseNote(raw);
+      supplied.weeklyNote = n.weeklyNote; supplied.topicNotes = n.topicNotes;
     }).catch(function () {});
     var p2 = fetchText("data/popularity.json").then(function (raw) {
       var d = JSON.parse(raw);
       Object.keys(d).forEach(function (k) { if (k.indexOf("http") === 0) supplied.popMap[k] = d[k]; });
     }).catch(function () {});
-    return Promise.all([p1, p2]);
+    var p3 = fetchText("data/archive/index.json").then(function (raw) {
+      supplied.issues = (JSON.parse(raw).issues || []);
+    }).catch(function () {});
+    return Promise.all([p1, p2, p3]);
+  }
+
+  // ── 주간 호 아카이브: 지난 호를 골라 열람 ──
+  function fillIssueSelect() {
+    var sel = $("#issue-sel");
+    if (!sel) return;
+    if (!supplied.issues.length) { sel.parentElement.style.display = "none"; return; }
+    sel.innerHTML = '<option value="">최신 호 (latest)</option>' + supplied.issues.map(function (d) {
+      return '<option value="' + d + '">' + d + '호</option>';
+    }).join("");
+    sel.addEventListener("change", function () {
+      var d = sel.value;
+      if (!d) { $("#csv-input").value = ""; state.fromLatest = false; state.noteSet = null; autoload(); return; }
+      Promise.all([
+        fetchText("data/archive/" + d + ".csv"),
+        fetchText("data/archive/" + d + ".md").then(parseNote).catch(function () { return null; })
+      ]).then(function (r) {
+        state.fromLatest = false;
+        state.noteSet = r[1];
+        $("#csv-input").value = r[0];
+        run();
+        status($("#input-status").textContent + " · 아카이브 " + d + "호");
+      }).catch(function () { status("아카이브 " + d + "호를 읽지 못했습니다."); });
+    });
+  }
+  // 지난 호(현재 기준일보다 오래된 최신 호)를 읽어 '지난 호 대비' 델타 재료로 넘긴다
+  function loadPrevIssue(curBase) {
+    var prev = null;
+    for (var i = 0; i < supplied.issues.length; i++) { if (supplied.issues[i] < curBase) { prev = supplied.issues[i]; break; } }
+    if (!prev) return Promise.resolve();
+    return fetchText("data/archive/" + prev + ".csv").then(function (text) {
+      var urls = {};
+      ATM.parseCSV(text).rows.forEach(function (r) { urls[r.url] = 1; });
+      supplied.prevIssue = { date: prev, urls: urls };
+    }).catch(function () {});
   }
 
   // 열자마자 자동 불러오기 (입력 칸이 비어 있을 때만)
@@ -108,13 +152,14 @@
     fetchText("data/latest.csv")
       .then(function (text) {
         if (!text.trim() || $("#csv-input").value.trim()) { if (!text.trim()) useExample("latest.csv 비어 있음"); return; }
-        state.fromLatest = true;
+        state.fromLatest = true; state.noteSet = null;
         $("#csv-input").value = text;
-        run();
-        status($("#input-status").textContent + " · data/latest.csv 자동 불러옴");
+        var base = text.split("\n").slice(1).map(function (l) { return l.slice(0, 10); }).filter(function (d) { return /^\d{4}-\d{2}-\d{2}$/.test(d); }).sort().pop();
+        loadPrevIssue(base || "9999").then(run);
+        status("data/latest.csv 자동 불러옴");
       })
       .catch(function () { useExample("latest.csv 없음"); });
   }
 
-  loadSupplied().then(autoload);
+  loadSupplied().then(function () { fillIssueSelect(); autoload(); });
 })();

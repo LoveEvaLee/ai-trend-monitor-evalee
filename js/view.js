@@ -168,9 +168,42 @@ window.ATM = window.ATM || {};
     SEL = null; KIND = null; STARF = false; // 새 입력이면 선택 초기화 (기간 탭·트리아지는 유지)
     buildTabs();
     refresh();
+    renderDelta(extras.prevIssue || null);
     renderUnclassified();
     renderMeta();
   };
+
+  // ── 델타 브리핑: 지난주(그리고 지난 호)와 달라진 것 — 전부 규칙 계산 ──
+  function renderDelta(prev) {
+    var parts = [];
+    if (prev) {
+      var fresh = S.items.filter(function (i) { return !prev.urls[i.url]; }).length;
+      if (fresh) parts.push("지난 " + prev.date + "호 대비 새 글 <b class='num'>" + fresh + "</b>건");
+    }
+    // 이번 주 처음 등장한 키워드: 최근 7일에만 나오고 그 전에는 한 번도 없던 것 (특이도순 상위 3)
+    var newKw = kwRank("7d").filter(function (k) { return S.df[k.lo] === k.count; }).slice(0, 3).map(function (k) { return k.kw; });
+    if (newKw.length) parts.push("처음 등장한 키워드 <b>" + esc(newKw.join(", ")) + "</b>");
+    // 가장 늘고 가장 준 축
+    var up = null, down = null;
+    S.topicStats.forEach(function (s) {
+      var d = s.week - s.prevWeek;
+      if (d > 0 && (!up || d > up.d)) up = { t: s.topic, d: d };
+      if (d < 0 && (!down || d < down.d)) down = { t: s.topic, d: d };
+    });
+    if (up) parts.push('<span style="color:var(--up)">▲ ' + esc(up.t) + " +" + up.d + "</span>");
+    if (down) parts.push('<span style="color:var(--down)">▼ ' + esc(down.t) + " " + down.d + "</span>");
+    // 이번 주 처음 보는 출처
+    var first = {};
+    S.items.forEach(function (i) { if (!first[i.source] || i.date < first[i.source]) first[i.source] = i.date; });
+    var ns = Object.keys(first).filter(function (s) { return day(S.base) - day(first[s]) < 7; });
+    if (ns.length) parts.push("처음 보는 출처 <b>" + esc(ns.slice(0, 2).join(", ")) + (ns.length > 2 ? " 외 " + (ns.length - 2) : "") + "</b>");
+    var a = S.items.filter(function (i) { return i.grade === "A" && inWin(i, 0, 7); }).length;
+    if (a) parts.push("이번 주 A급 <b class='num'>" + a + "</b>건");
+    var el2 = $("delta");
+    if (!parts.length) { el2.style.display = "none"; return; }
+    el2.style.display = "";
+    el2.innerHTML = "<b>지난주와 달라진 것</b> · " + parts.join(" · ");
+  }
 
   // 내보내기(마크다운)가 화면과 같은 순위를 쓰도록 특이 키워드 순위를 내준다
   ATM.distinctRanks = function () {
