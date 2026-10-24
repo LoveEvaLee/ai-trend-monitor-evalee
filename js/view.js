@@ -33,10 +33,47 @@ window.ATM = window.ATM || {};
     if (!b || !S) return;
     ev.preventDefault(); ev.stopPropagation();
     var map = b.dataset.act === "read" ? TRI.read : TRI.star, url = b.dataset.url;
-    if (map[url]) delete map[url]; else map[url] = new Date().toISOString().slice(0, 10);
+    if (map[url]) { delete map[url]; }
+    else if (b.dataset.act === "star") {
+      // 별표에는 그 글의 특징(키워드·주제)도 저장 — 다음 주 CSV에 그 글이 없어도 취향 프로필에 남는다
+      var it = null; for (var i = 0; i < S.items.length; i++) if (S.items[i].url === url) { it = S.items[i]; break; }
+      map[url] = { d: new Date().toISOString().slice(0, 10),
+        kw: it ? it.keywords.filter(keep).slice(0, 12) : [], t: it ? it.topics.slice() : [] };
+    }
+    else { map[url] = new Date().toISOString().slice(0, 10); }
     triSave();
     renderReads(); renderInstalls(); renderGrid();
   });
+
+  // ── 취향 프로필: 별표 누적에서 키워드 가중치 — 추천('먼저 읽을 것')에만 반영 ──
+  function prefProfile() {
+    var P = RULES.personal || {}, w = {};
+    Object.keys(TRI.star).forEach(function (u) {
+      var s = TRI.star[u];
+      if (s && s.kw) s.kw.forEach(function (k) { var lo = k.toLowerCase(); w[lo] = (w[lo] || 0) + 1; });
+    });
+    var top = Object.keys(w).sort(function (a, b) { return w[b] - w[a]; }).slice(0, P.profileTopKw || 30);
+    var out = {}; top.forEach(function (k) { out[k] = w[k]; });
+    return out;
+  }
+  function prefBoost(it, profile) {
+    var P = RULES.personal || {};
+    var hits = [];
+    it.keywords.forEach(function (k) { var lo = k.toLowerCase(); if (profile[lo] && hits.indexOf(k) < 0) hits.push(k); });
+    var f = Math.min(1 + hits.length * (P.starKeywordBoost || 0.15), P.maxBoost || 1.6);
+    return { f: f, hits: hits };
+  }
+  function byPref(profile) {
+    return function (a, b) {
+      var fa = prefBoost(a, profile).f, fb = prefBoost(b, profile).f;
+      return (b.score * fb) - (a.score * fa) || byImp(a, b);
+    };
+  }
+  function prefChip(it, profile) {
+    var p = prefBoost(it, profile);
+    if (p.f <= 1) return "";
+    return '<span class="chip pref" title="별표한 글들과 겹친 키워드: ' + esc(p.hits.join(", ")) + '">★ 취향 +' + Math.round((p.f - 1) * 100) + '%</span>';
+  }
 
   // 제목 마우스오버: 이 글이 나에게 왜 도움이 되는지 — 파이프라인 note(큐레이터 요약·이유) 우선, 없으면 규칙 기반
   function whyText(it) {
@@ -216,13 +253,14 @@ window.ATM = window.ATM || {};
     });
   }
 
+  var PROFILE = {};   // renderReads가 갱신
   function readCard(it) {
     var c = el("article", "read");
     c.innerHTML = '<div class="row"><span class="num muted" style="font-size:.75rem">' + it.date + '</span>' + gradeChip(it) +
       '<span class="lab">' + esc(it.kind || "기타") + '</span>' + (it.recent === false ? '<span class="lab">이번 주 없음</span>' : '') +
       '<span class="num" style="margin-left:auto;font-size:.8rem;color:var(--ink)">' + it.score.toFixed(2) + '</span>' + triBtns(it) + '</div>' +
       titleLink(it) +
-      '<div class="row">' + topicChips(it.topics) + '</div>' +
+      '<div class="row">' + topicChips(it.topics) + prefChip(it, PROFILE) + '</div>' +
       '<span class="muted" style="font-size:.74rem">' + esc(it.source) + '</span>';
     return c;
   }
@@ -233,8 +271,9 @@ window.ATM = window.ATM || {};
   // 축마다 1건: 읽음·제외 유형을 뺀 뒤 최근 7일 우선 — 읽음을 누르면 다음 후보가 올라온다
   function pickReadNext() {
     var EXK = RULES.readExcludeKinds || [];
+    var cmp = Object.keys(PROFILE).length ? byPref(PROFILE) : byImp;
     return S.topics.map(function (t) {
-      var T = S.sorted.filter(function (i) { return i.topics.indexOf(t) >= 0 && EXK.indexOf(i.kind) < 0 && !isRead(i); });
+      var T = S.items.filter(function (i) { return i.topics.indexOf(t) >= 0 && EXK.indexOf(i.kind) < 0 && !isRead(i); }).sort(cmp);
       if (!T.length) return null;
       var w = null; for (var j = 0; j < T.length; j++) { if (inWin(T[j], 0, 7)) { w = T[j]; break; } }
       var it = w || T[0];
@@ -244,13 +283,15 @@ window.ATM = window.ATM || {};
   }
   function renderReads() {
     $("reads").innerHTML = "";
+    PROFILE = prefProfile();
+    var cmp = Object.keys(PROFILE).length ? byPref(PROFILE) : byImp;
     var list;
     if (STARF) {
       list = pool().filter(isStar).sort(byImp).slice(0, 12);
       $("reads-q").textContent = (SEL ? SEL + " · " : "") + "별표한 글 " + list.length + "건 (읽음 포함)";
     }
-    else if (KIND) { list = readPoolK().slice().sort(byImp).slice(0, 8); $("reads-q").textContent = (SEL ? SEL + " · " : "") + KIND + " 중요도 상위 " + list.length + "건 · 읽음 제외"; }
-    else if (SEL) { list = readPoolK().slice().sort(byImp).slice(0, 4); $("reads-q").textContent = "선택한 주제의 중요도 상위 4건 (언론·읽음 제외)"; }
+    else if (KIND) { list = readPoolK().slice().sort(cmp).slice(0, 8); $("reads-q").textContent = (SEL ? SEL + " · " : "") + KIND + " 중요도 상위 " + list.length + "건 · 읽음 제외"; }
+    else if (SEL) { list = readPoolK().slice().sort(cmp).slice(0, 4); $("reads-q").textContent = "선택한 주제의 중요도 상위 4건 (언론·읽음 제외)"; }
     else { list = pickReadNext(); $("reads-q").textContent = "축(주제)마다 중요도 1위 1건 — 최근 7일 우선, 없으면 전체 1위 · 언론·읽음 제외"; }
     list.forEach(function (it) { $("reads").appendChild(readCard(it)); });
     if (!list.length) $("reads").innerHTML = '<p class="muted" style="margin:0;font-size:.84rem">' + (STARF ? "별표한 글이 없음 — 카드의 ☆을 눌러 모아 두세요" : "해당하는 글이 없음") + '</p>';

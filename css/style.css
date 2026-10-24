@@ -137,6 +137,7 @@ details.unc-fold > summary::-webkit-details-marker { display: none; }
 .tbtn:hover { border-color: var(--accent); color: var(--accent); }
 .tbtn.on { background: var(--gA); border-color: var(--gAi); color: var(--gAi); }
 .tbtn.star.on { background: var(--gC); border-color: var(--gCi); color: var(--gCi); }
+.chip.pref { background: var(--gC); color: var(--gCi); cursor: help; }
 li.readed > a { opacity: .45; text-decoration-line: line-through; text-decoration-color: var(--muted); }
 
 /* '나에게 왜' 커스텀 툴팁 — OS 기본 툴팁은 긴 글을 자르므로 직접 그린다 */
