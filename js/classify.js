@@ -49,7 +49,7 @@ window.ATM = window.ATM || {};
     var items = rows.map(function (r) {
       var src = sourceOf(r.url, rules);
       return {
-        line: r.line, date: r.date, title: r.title, url: r.url, source: r.source,
+        line: r.line, date: r.date, title: r.title, url: r.url, source: r.source, note: r.note || "",
         grade: src ? src.grade : rules.unknownGrade,
         gradeReason: src ? src.reason : "등급표에 없는 도메인 (기본 등급)",
         gradeType: src ? src.type : "미등록",

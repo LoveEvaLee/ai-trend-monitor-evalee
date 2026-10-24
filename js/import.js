@@ -6,6 +6,7 @@ window.ATM = window.ATM || {};
 // text → { rows: [{ line, date, title, url, source }], skipped: [{ line, reason }], notes: [문자열] }
 // - 첫 줄은 머리글(date,title,url,source)로 보고 건너뛴다. line은 그 줄이 시작하는 원본 줄 번호(머리글 = 1)
 // - 머리글의 열 이름으로 칸을 찾는다. 네 이름이 다 있으면 순서가 달라도 된다 (인접 팀 피드백)
+// - 선택 열 note: 머리글에 note가 있으면 그 칸을 항목의 note(큐레이터 요약·이유)로 읽는다. 없으면 빈 문자열 (v0.5)
 // - 첫 줄 첫 칸이 날짜면 머리글이 없는 파일로 보고 첫 줄도 기사로 읽는다. 어느 쪽이든 notes에 알린다
 // - 큰따옴표로 감싼 칸 안의 쉼표·줄바꿈은 칸 구분으로 보지 않는다. 칸 안의 ""는 " 하나 (RFC 4180)
 // - 빈 줄, 날짜 칸이 빈 줄, 날짜가 YYYY-MM-DD(실제 있는 날짜)가 아닌 줄은 rows에 넣지 않고 skipped에 줄 번호와 이유를 남긴다
@@ -29,7 +30,8 @@ ATM.parseCSV = function (text) {
       date: date,
       title: (f[1] || "").trim(),
       url: (f[2] || "").trim(),
-      source: (f[3] || "").trim()
+      source: (f[3] || "").trim(),
+      note: col.note != null ? (rec.fields[col.note] || "").trim() : ""
     });
   });
 
@@ -54,6 +56,8 @@ function readHeader(rec) {
   if (missing.length) {
     return { hasHeader: true, col: fixed, note: "머리글에 " + missing.join(", ") + " 열이 없어 date,title,url,source 순서로 읽었습니다" };
   }
+  var ni = names.indexOf("note");
+  if (ni >= 0) col.note = ni;
   var same = COLUMNS.every(function (name) { return col[name] === fixed[name]; });
   return { hasHeader: true, col: col, note: same ? "" : "머리글의 열 이름으로 칸을 찾았습니다 (" + rec.fields.join(",") + ")" };
 }
