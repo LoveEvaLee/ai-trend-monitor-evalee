@@ -24,7 +24,7 @@ window.ATM = window.ATM || {};
       " · " + (it.kind || "기타") + " · " + it.grade + "등급 · 중요도 " + it.score.toFixed(2);
   }
   function titleLink(it) {
-    return '<a class="t" href="' + esc(it.url) + '" title="' + esc(whyText(it)) + '" target="_blank" rel="noopener">' + esc(it.title) + '</a>';
+    return '<a class="t" href="' + esc(it.url) + '" data-why="' + esc(whyText(it)) + '" target="_blank" rel="noopener">' + esc(it.title) + '</a>';
   }
   function byImp(a, b) { return b.score - a.score || (a.date < b.date ? 1 : a.date > b.date ? -1 : 0) || GRADE_RANK[a.grade] - GRADE_RANK[b.grade] || a.line - b.line; }
   function day(s) { return Date.parse(s + "T00:00:00Z") / 864e5; }
@@ -360,7 +360,7 @@ window.ATM = window.ATM || {};
       if (S.topicNotes[t]) c.title = S.topicNotes[t];
       c.innerHTML = '<h3><span class="dot" style="background:' + TOPIC_COLOR[t] + ';margin-right:6px"></span>' + esc(t) + '</h3>' +
         (list.length ? '<ol>' + list.map(function (it) {
-          return '<li><a href="' + esc(it.url) + '" title="' + esc(whyText(it)) + '" target="_blank" rel="noopener">' + esc(it.title) + '</a>' +
+          return '<li><a href="' + esc(it.url) + '" data-why="' + esc(whyText(it)) + '" target="_blank" rel="noopener">' + esc(it.title) + '</a>' +
             '<div class="row" style="margin-top:3px">' + gradeChip(it) + '<span class="s">' + it.date.slice(5) + ' · ' + it.score.toFixed(2) + '</span></div></li>';
         }).join("") + '</ol>' : '<p class="muted" style="margin:0;font-size:.8rem">이 입력에는 해당 기사가 없음</p>');
       $("grid").appendChild(c);
@@ -372,7 +372,7 @@ window.ATM = window.ATM || {};
     $("unc").innerHTML = "";
     un.forEach(function (it) {
       var r = el("div", "it");
-      r.innerHTML = '<span class="num muted">' + it.date + '</span><a href="' + esc(it.url) + '" title="' + esc(whyText(it)) + '" target="_blank" rel="noopener">' + esc(it.title) + '</a><span class="lab">' + esc(it.kind) + ' · ' + esc(it.source) + '</span>';
+      r.innerHTML = '<span class="num muted">' + it.date + '</span><a href="' + esc(it.url) + '" data-why="' + esc(whyText(it)) + '" target="_blank" rel="noopener">' + esc(it.title) + '</a><span class="lab">' + esc(it.kind) + ' · ' + esc(it.source) + '</span>';
       $("unc").appendChild(r);
     });
     $("unc-sum").textContent = "최근 " + un.length + "건 펼쳐 보기 — 전체 미분류 " + S.stats.unclassified + "건";

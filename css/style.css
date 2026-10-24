@@ -130,6 +130,18 @@ details.unc-fold > summary::before { content: "▸"; transition: transform .15s;
 details.unc-fold[open] > summary::before { transform: rotate(90deg); }
 details.unc-fold > summary::-webkit-details-marker { display: none; }
 
+/* '나에게 왜' 커스텀 툴팁 — OS 기본 툴팁은 긴 글을 자르므로 직접 그린다 */
+[data-why] { position: relative; }
+[data-why]:hover::after {
+  content: attr(data-why);
+  position: absolute; left: 0; top: 100%; margin-top: 7px; z-index: 30;
+  width: min(380px, 78vw); white-space: normal; pointer-events: none;
+  background: var(--card); color: var(--body); border: 1px solid var(--line);
+  border-radius: 10px; padding: 9px 12px; font-size: .78rem; line-height: 1.55; font-weight: 400;
+  box-shadow: 0 6px 22px rgba(46,42,74,.16);
+}
+.unc [data-why]:hover::after { left: auto; right: 0; }
+
 footer.src { font-size: .78rem; color: var(--muted); display: grid; gap: 4px; padding: 0 4px; }
 
 @media (max-width: 980px) {
