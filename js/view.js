@@ -17,6 +17,27 @@ window.ATM = window.ATM || {};
   function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
   function gradeChip(it) { return '<span class="grade g' + it.grade + '" title="' + esc(it.gradeReason) + '">' + it.grade + '</span>'; }
   function topicChips(ts) { return ts.map(function (t) { return '<span class="chip"><span class="dot" style="background:' + (TOPIC_COLOR[t] || "var(--tu)") + '"></span> ' + esc(t) + '</span>'; }).join(""); }
+  // ── 트리아지: 읽음 ✓ · 별표 ★ — URL 기준, 이 브라우저의 localStorage에만 저장 (서버 없음) ──
+  var TRI = { read: {}, star: {} }, STARF = false;
+  (function () { try { var t = JSON.parse(localStorage.getItem("atm-triage")); if (t) TRI = t; } catch (e) {} if (!TRI.read) TRI.read = {}; if (!TRI.star) TRI.star = {}; })();
+  function triSave() { try { localStorage.setItem("atm-triage", JSON.stringify(TRI)); } catch (e) {} }
+  function isRead(it) { return !!TRI.read[it.url]; }
+  function isStar(it) { return !!TRI.star[it.url]; }
+  function triBtns(it) {
+    return '<span class="tri">' +
+      '<button type="button" class="tbtn' + (isRead(it) ? " on" : "") + '" data-act="read" data-url="' + esc(it.url) + '" aria-pressed="' + isRead(it) + '" title="읽음 표시 — 먼저 읽을 것에서 빠지고 다음 후보가 올라옵니다">✓</button>' +
+      '<button type="button" class="tbtn star' + (isStar(it) ? " on" : "") + '" data-act="star" data-url="' + esc(it.url) + '" aria-pressed="' + isStar(it) + '" title="별표 — 별표 필터로 모아 봅니다">' + (isStar(it) ? "★" : "☆") + '</button></span>';
+  }
+  document.addEventListener("click", function (ev) {
+    var b = ev.target.closest ? ev.target.closest(".tbtn") : null;
+    if (!b || !S) return;
+    ev.preventDefault(); ev.stopPropagation();
+    var map = b.dataset.act === "read" ? TRI.read : TRI.star, url = b.dataset.url;
+    if (map[url]) delete map[url]; else map[url] = new Date().toISOString().slice(0, 10);
+    triSave();
+    renderReads(); renderInstalls(); renderGrid();
+  });
+
   // 제목 마우스오버: 이 글이 나에게 왜 도움이 되는지 — 파이프라인 note(큐레이터 요약·이유) 우선, 없으면 규칙 기반
   function whyText(it) {
     if (it.note) return it.note;
@@ -105,19 +126,9 @@ window.ATM = window.ATM || {};
       return { topic: t, total: T.length, week: n(0, 7), prevWeek: n(7, 14), d30: n(0, 30) };
     });
 
-    // 먼저 읽을 것 기본: 축마다 1건 (제외 유형 빼고, 최근 7일 우선)
-    var EXK = RULES.readExcludeKinds || [];
-    var sorted = items.slice().sort(byImp);
-    S.readNext = topics.map(function (t) {
-      var T = sorted.filter(function (i) { return i.topics.indexOf(t) >= 0 && EXK.indexOf(i.kind) < 0; });
-      if (!T.length) return null;
-      var w = null; for (var j = 0; j < T.length; j++) { if (inWin(T[j], 0, 7)) { w = T[j]; break; } }
-      var it = w || T[0];
-      var c = Object.create(it); c.recent = !!w;
-      return c;
-    }).filter(Boolean);
+    S.sorted = items.slice().sort(byImp);   // 먼저 읽을 것은 렌더 시점에 고른다 (읽음 표시를 반영하려고)
 
-    SEL = null; KIND = null;      // 새 입력이면 선택 초기화 (기간 탭은 유지)
+    SEL = null; KIND = null; STARF = false; // 새 입력이면 선택 초기화 (기간 탭·트리아지는 유지)
     buildTabs();
     refresh();
     renderUnclassified();
@@ -209,7 +220,7 @@ window.ATM = window.ATM || {};
     var c = el("article", "read");
     c.innerHTML = '<div class="row"><span class="num muted" style="font-size:.75rem">' + it.date + '</span>' + gradeChip(it) +
       '<span class="lab">' + esc(it.kind || "기타") + '</span>' + (it.recent === false ? '<span class="lab">이번 주 없음</span>' : '') +
-      '<span class="num" style="margin-left:auto;font-size:.8rem;color:var(--ink)">' + it.score.toFixed(2) + '</span></div>' +
+      '<span class="num" style="margin-left:auto;font-size:.8rem;color:var(--ink)">' + it.score.toFixed(2) + '</span>' + triBtns(it) + '</div>' +
       titleLink(it) +
       '<div class="row">' + topicChips(it.topics) + '</div>' +
       '<span class="muted" style="font-size:.74rem">' + esc(it.source) + '</span>';
@@ -217,17 +228,38 @@ window.ATM = window.ATM || {};
   }
   function readPoolK() {
     var EXK = RULES.readExcludeKinds || [];
-    return pool().filter(function (i) { return EXK.indexOf(i.kind) < 0 && (!KIND || i.kind === KIND); });
+    return pool().filter(function (i) { return EXK.indexOf(i.kind) < 0 && (!KIND || i.kind === KIND) && !isRead(i); });
+  }
+  // 축마다 1건: 읽음·제외 유형을 뺀 뒤 최근 7일 우선 — 읽음을 누르면 다음 후보가 올라온다
+  function pickReadNext() {
+    var EXK = RULES.readExcludeKinds || [];
+    return S.topics.map(function (t) {
+      var T = S.sorted.filter(function (i) { return i.topics.indexOf(t) >= 0 && EXK.indexOf(i.kind) < 0 && !isRead(i); });
+      if (!T.length) return null;
+      var w = null; for (var j = 0; j < T.length; j++) { if (inWin(T[j], 0, 7)) { w = T[j]; break; } }
+      var it = w || T[0];
+      var c = Object.create(it); c.recent = !!w;
+      return c;
+    }).filter(Boolean);
   }
   function renderReads() {
     $("reads").innerHTML = "";
     var list;
-    if (KIND) { list = readPoolK().slice().sort(byImp).slice(0, 8); $("reads-q").textContent = (SEL ? SEL + " · " : "") + KIND + " 중요도 상위 " + list.length + "건"; }
-    else if (SEL) { list = readPoolK().slice().sort(byImp).slice(0, 4); $("reads-q").textContent = "선택한 주제의 중요도 상위 4건 (언론 제외)"; }
-    else { list = S.readNext; $("reads-q").textContent = "축(주제)마다 중요도 1위 1건 — 최근 7일 우선, 없으면 전체 1위 · 언론 제외"; }
+    if (STARF) {
+      list = pool().filter(isStar).sort(byImp).slice(0, 12);
+      $("reads-q").textContent = (SEL ? SEL + " · " : "") + "별표한 글 " + list.length + "건 (읽음 포함)";
+    }
+    else if (KIND) { list = readPoolK().slice().sort(byImp).slice(0, 8); $("reads-q").textContent = (SEL ? SEL + " · " : "") + KIND + " 중요도 상위 " + list.length + "건 · 읽음 제외"; }
+    else if (SEL) { list = readPoolK().slice().sort(byImp).slice(0, 4); $("reads-q").textContent = "선택한 주제의 중요도 상위 4건 (언론·읽음 제외)"; }
+    else { list = pickReadNext(); $("reads-q").textContent = "축(주제)마다 중요도 1위 1건 — 최근 7일 우선, 없으면 전체 1위 · 언론·읽음 제외"; }
     list.forEach(function (it) { $("reads").appendChild(readCard(it)); });
-    if (!list.length) $("reads").innerHTML = '<p class="muted" style="margin:0;font-size:.84rem">해당하는 글이 없음</p>';
-    Array.prototype.forEach.call($("kind-tabs").children, function (b) { b.setAttribute("aria-selected", String((b.dataset.k || null) === KIND)); });
+    if (!list.length) $("reads").innerHTML = '<p class="muted" style="margin:0;font-size:.84rem">' + (STARF ? "별표한 글이 없음 — 카드의 ☆을 눌러 모아 두세요" : "해당하는 글이 없음") + '</p>';
+    var sc = document.getElementById("star-chip");
+    if (sc) { var n = S.items.filter(isStar).length; sc.innerHTML = (STARF ? "★" : "☆") + " 별표 " + n; sc.setAttribute("aria-selected", String(STARF)); }
+    Array.prototype.forEach.call($("kind-tabs").children, function (b) {
+      if (b.id === "star-chip") return;
+      b.setAttribute("aria-selected", String(!STARF && (b.dataset.k || null) === KIND));
+    });
   }
 
   function renderInstalls() {
@@ -240,7 +272,7 @@ window.ATM = window.ATM || {};
     cand.slice(0, 3).forEach(function (it) {
       var c = el("article", "read inst");
       c.innerHTML = '<div class="row"><span class="num muted" style="font-size:.75rem">' + it.date + '</span>' + gradeChip(it) +
-        (it.metric ? '<span class="pop" style="margin-left:auto">' + esc(it.metric) + '</span>' : '') + '</div>' +
+        (it.metric ? '<span class="pop" style="margin-left:auto">' + esc(it.metric) + '</span>' : '') + triBtns(it) + '</div>' +
         titleLink(it) +
         '<div class="row">' + topicChips(it.topics) + '</div>' +
         '<span class="muted" style="font-size:.74rem">' + esc(it.source) + '</span>';
@@ -360,8 +392,8 @@ window.ATM = window.ATM || {};
       if (S.topicNotes[t]) c.title = S.topicNotes[t];
       c.innerHTML = '<h3><span class="dot" style="background:' + TOPIC_COLOR[t] + ';margin-right:6px"></span>' + esc(t) + '</h3>' +
         (list.length ? '<ol>' + list.map(function (it) {
-          return '<li><a href="' + esc(it.url) + '" data-why="' + esc(whyText(it)) + '" target="_blank" rel="noopener">' + esc(it.title) + '</a>' +
-            '<div class="row" style="margin-top:3px">' + gradeChip(it) + '<span class="s">' + it.date.slice(5) + ' · ' + it.score.toFixed(2) + '</span></div></li>';
+          return '<li' + (isRead(it) ? ' class="readed"' : '') + '><a href="' + esc(it.url) + '" data-why="' + esc(whyText(it)) + '" target="_blank" rel="noopener">' + esc(it.title) + '</a>' +
+            '<div class="row" style="margin-top:3px">' + gradeChip(it) + '<span class="s">' + it.date.slice(5) + ' · ' + it.score.toFixed(2) + '</span>' + triBtns(it) + '</div></li>';
         }).join("") + '</ol>' : '<p class="muted" style="margin:0;font-size:.8rem">이 입력에는 해당 기사가 없음</p>');
       $("grid").appendChild(c);
     });
@@ -398,9 +430,12 @@ window.ATM = window.ATM || {};
     [{ k: null, label: "전체" }].concat(order.filter(function (k) { return have[k]; }).map(function (k) { return { k: k, label: k + " " + have[k] }; }))
       .forEach(function (t) {
         var b = el("button", null, t.label); if (t.k) b.dataset.k = t.k; b.setAttribute("role", "tab");
-        b.addEventListener("click", function () { KIND = (KIND === t.k ? null : t.k); renderReads(); });
+        b.addEventListener("click", function () { STARF = false; KIND = (KIND === t.k ? null : t.k); renderReads(); });
         $("kind-tabs").appendChild(b);
       });
+    var sb = el("button", null, "☆ 별표 0"); sb.id = "star-chip"; sb.setAttribute("role", "tab");
+    sb.addEventListener("click", function () { STARF = !STARF; renderReads(); });
+    $("kind-tabs").appendChild(sb);
   }
 
   function refresh() {
