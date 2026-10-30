@@ -48,8 +48,10 @@ A등급 55 → 60. 수치의 근거는 [data/expected.md](data/expected.md)에 �
 3. 결과는 CSV(다시 넣으면 같은 결과)와 마크다운으로 내보냅니다.
 
 데이터 공급 파일(없어도 동작): `data/latest.csv` · `data/weekly_note.md`(큐레이터 메모) ·
-`data/popularity.json`(깃허브 ★·HF 좋아요) · `data/archive/`(주간 호). 지금은 손으로 넣고,
-다음 단계로 매일 수집 파이프라인(헤르메스·아르고스)이 자동 갱신하도록 연결할 계획입니다.
+`data/popularity.json`(깃허브 ★·HF 좋아요) · `data/archive/`(주간 호). 매일 수집
+파이프라인(헤르메스·아르고스)이 자동 갱신합니다 — `scripts/export_monitor.py`가 digest를
+공급 파일로 바꾸고, `scripts/vm_update.sh`(서버 크론, 매일 13:30)가 push까지 합니다.
+호 보관은 월요일마다 한 번. 손으로 갱신하려면 `python3 scripts/export_monitor.py` 한 줄.
 
 ## 판단 기준과 한계
 

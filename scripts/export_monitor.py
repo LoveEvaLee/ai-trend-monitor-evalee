@@ -9,7 +9,8 @@
 
 날짜 규칙은 팀 예시(W4)와 같다: 항목 날짜 = digest 날짜(소식으로 들어온 날).
 경로는 환경변수 HERMES_VAULT / ARGUS_VAULT로 바꿀 수 있다(기본은 맥 경로 — VM에서는 env로 지정).
-사용: python3 scripts/export_monitor.py  (저장소 어디서 실행해도 됨)
+사용: python3 scripts/export_monitor.py [--no-archive]
+  --no-archive: 공급 파일만 갱신하고 호 보관은 건너뛴다(데일리 크론용 — 호는 주 1회만 쌓는다).
 """
 import csv
 import glob
@@ -134,4 +135,7 @@ with open(os.path.join(REPO, "data", "popularity.json"), "w", encoding="utf-8") 
 base = max(r["date"] for r in items)
 print(f"latest.csv {len(items)}건 (기준일 {base} · 창 {CUTOFF}~) · note 있음 {sum(1 for r in items if r['note'])}건")
 print(f"weekly_note {len(parts)}단락 · popularity {len(pop)}건")
-subprocess.run([sys.executable, os.path.join(HERE, "archive_issue.py")], check=True)
+if "--no-archive" in sys.argv[1:]:
+    print("호 보관 생략 (--no-archive)")
+else:
+    subprocess.run([sys.executable, os.path.join(HERE, "archive_issue.py")], check=True)
