@@ -1,5 +1,5 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-10-30 · URL별 최신값",
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-10-31 · URL별 최신값",
  "https://github.com/microsoft/AI-For-Beginners": {
   "pop": 1902,
   "metric": "★ 1,902"
@@ -105,8 +105,8 @@
   "metric": "★ 1,815"
  },
  "https://github.com/macro-inc/macro": {
-  "pop": 106,
-  "metric": "★ 106"
+  "pop": 117,
+  "metric": "★ 117"
  },
  "https://github.com/stablyai/orca": {
   "pop": 1543,
@@ -545,16 +545,16 @@
   "metric": "♥ 665 · 3K 다운로드"
  },
  "https://github.com/pbakaus/impeccable": {
-  "pop": 2881,
-  "metric": "★ 2,881"
+  "pop": 2299,
+  "metric": "★ 2,299"
  },
  "https://huggingface.co/Cloudflare/clef": {
   "pop": 2089,
   "metric": "♥ 2,089 · 15K 다운로드"
  },
  "https://github.com/thedotmack/claude-mem": {
-  "pop": 459,
-  "metric": "★ 459"
+  "pop": 1145,
+  "metric": "★ 1,145"
  },
  "https://huggingface.co/Cloudflare/clef-flash": {
   "pop": 590,
@@ -649,8 +649,8 @@
   "metric": "♥ 887 · 15K 다운로드"
  },
  "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017": {
-  "pop": 3764,
-  "metric": "♥ 3,764 · 131K 다운로드"
+  "pop": 4004,
+  "metric": "♥ 4,004 · 146K 다운로드"
  },
  "https://github.com/Comfy-Org/ComfyUI": {
   "pop": 1201,
@@ -721,8 +721,8 @@
   "metric": "♥ 905 · 10K 다운로드"
  },
  "https://huggingface.co/Nanbeige/Nanbeige4.3-33B": {
-  "pop": 771,
-  "metric": "♥ 771 · 10K 다운로드"
+  "pop": 797,
+  "metric": "♥ 797 · 12K 다운로드"
  },
  "https://github.com/elayadesign/ai-design-skills": {
   "pop": 1178,
@@ -737,7 +737,23 @@
   "metric": "♥ 450 · 13K 다운로드"
  },
  "https://huggingface.co/LiquidAI/LFM3-1.7B": {
-  "pop": 476,
-  "metric": "♥ 476 · 16K 다운로드"
+  "pop": 558,
+  "metric": "♥ 558 · 24K 다운로드"
+ },
+ "https://github.com/CopilotKit/OpenBot": {
+  "pop": 707,
+  "metric": "★ 707"
+ },
+ "https://github.com/expo/skills": {
+  "pop": 108,
+  "metric": "★ 108"
+ },
+ "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B": {
+  "pop": 497,
+  "metric": "♥ 497 · 16K 다운로드"
+ },
+ "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF": {
+  "pop": 507,
+  "metric": "♥ 507 · 1.7M 다운로드"
  }
 }

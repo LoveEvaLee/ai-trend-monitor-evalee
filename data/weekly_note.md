@@ -1,2 +1,2 @@
-[논문 · 2026-10-30] 오늘의 1픽: "When Models Improve But Failures Persist" — ChatGPT·DeepSeek·Claude의 1년치 실제 대화 로그를 분석해, 모델이 발전해도 환각·과업 오해·사용자 교정 미반영 같은 오류 패턴은 줄지 않는다는 것을 보여준 연구로 LLM 오류예측 축(②)에 직결된다.
-[트렌드 · 2026-10-30] 미스트랄이 1조 파라미터(활성 490억) MoE 모델 Mistral Large 4의 가중치를 전면 공개하며 오픈 프론티어 모델 경쟁에 새 기준을 세웠다.
+[논문 · 2026-10-31] 오늘의 1픽: BIRD/Spider 두 벤치마크로 사전등록(pre-registration)까지 거친 'Does a Governed Confidence Score Know When a Text-to-SQL Answer Is Right?' — LLM 응답 신뢰도 점수를 설계 분해해 재구성하자 AUROC가 0.566→0.725로 오르고 정답 보류율이 49%→8.8%로 줄었다는, LLM 오류예측 축(②)에 직결되는 방법론 논문.
+[트렌드 · 2026-10-31] 오늘의 1픽: Cursor 마켓플레이스에 올라온 'Claude Code' VS Code 확장판이 백도어(RAT)가 심긴 변조 버전으로 드러났다(HN 717점) — Claude Code 확장/플러그인은 공식 배포처·서명 확인 없이는 설치하지 말 것. 같은 날 Anthropic이 Claude Code 세션 사용량 한도(5시간 캡)까지 일부 계정에서 풀어, 하네스 중사용자에겐 경보와 호재가 동시에 터진 하루.
