@@ -1,5 +1,5 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-10-31 · URL별 최신값",
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-01 · URL별 최신값",
  "https://github.com/microsoft/AI-For-Beginners": {
   "pop": 1902,
   "metric": "★ 1,902"
@@ -36,10 +36,6 @@
   "pop": 3793,
   "metric": "♥ 3,793 · 2.5M 다운로드"
  },
- "https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731-GGUF": {
-  "pop": 310,
-  "metric": "♥ 310 · 49K 다운로드"
- },
  "https://huggingface.co/MiniMaxAI/MiniMax-H3": {
   "pop": 3925,
   "metric": "♥ 3,925 · 2M 다운로드"
@@ -61,8 +57,8 @@
   "metric": "★ 148"
  },
  "https://github.com/obra/superpowers": {
-  "pop": 1037,
-  "metric": "★ 1,037"
+  "pop": 663,
+  "metric": "★ 663"
  },
  "https://github.com/PrimeIntellect-ai/prime-agent": {
   "pop": 2642,
@@ -545,16 +541,16 @@
   "metric": "♥ 665 · 3K 다운로드"
  },
  "https://github.com/pbakaus/impeccable": {
-  "pop": 2299,
-  "metric": "★ 2,299"
+  "pop": 1339,
+  "metric": "★ 1,339"
  },
  "https://huggingface.co/Cloudflare/clef": {
   "pop": 2089,
   "metric": "♥ 2,089 · 15K 다운로드"
  },
  "https://github.com/thedotmack/claude-mem": {
-  "pop": 1145,
-  "metric": "★ 1,145"
+  "pop": 1723,
+  "metric": "★ 1,723"
  },
  "https://huggingface.co/Cloudflare/clef-flash": {
   "pop": 590,
@@ -649,8 +645,8 @@
   "metric": "♥ 887 · 15K 다운로드"
  },
  "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017": {
-  "pop": 4004,
-  "metric": "♥ 4,004 · 146K 다운로드"
+  "pop": 4102,
+  "metric": "♥ 4,102 · 156K 다운로드"
  },
  "https://github.com/Comfy-Org/ComfyUI": {
   "pop": 1201,
@@ -721,8 +717,8 @@
   "metric": "♥ 905 · 10K 다운로드"
  },
  "https://huggingface.co/Nanbeige/Nanbeige4.3-33B": {
-  "pop": 797,
-  "metric": "♥ 797 · 12K 다운로드"
+  "pop": 867,
+  "metric": "♥ 867 · 14K 다운로드"
  },
  "https://github.com/elayadesign/ai-design-skills": {
   "pop": 1178,
@@ -737,8 +733,8 @@
   "metric": "♥ 450 · 13K 다운로드"
  },
  "https://huggingface.co/LiquidAI/LFM3-1.7B": {
-  "pop": 558,
-  "metric": "♥ 558 · 24K 다운로드"
+  "pop": 630,
+  "metric": "♥ 630 · 33K 다운로드"
  },
  "https://github.com/CopilotKit/OpenBot": {
   "pop": 707,
@@ -749,11 +745,23 @@
   "metric": "★ 108"
  },
  "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B": {
-  "pop": 497,
-  "metric": "♥ 497 · 16K 다운로드"
+  "pop": 544,
+  "metric": "♥ 544 · 24K 다운로드"
  },
  "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF": {
   "pop": 507,
   "metric": "♥ 507 · 1.7M 다운로드"
+ },
+ "https://github.com/Donchitos/Claude-Code-Game-Studios": {
+  "pop": 724,
+  "metric": "★ 724"
+ },
+ "https://github.com/lightpanda-io/browser": {
+  "pop": 929,
+  "metric": "★ 929"
+ },
+ "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B": {
+  "pop": 1403,
+  "metric": "♥ 1,403 · 3K 다운로드"
  }
 }
