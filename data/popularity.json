@@ -1,45 +1,5 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-03 · URL별 최신값",
- "https://github.com/TencentCloud/TencentDB-Agent-Memory": {
-  "pop": 1111,
-  "metric": "★ 1,111"
- },
- "https://github.com/zhaoxuya520/reverse-skill": {
-  "pop": 409,
-  "metric": "★ 409"
- },
- "https://github.com/uber/ADR": {
-  "pop": 148,
-  "metric": "★ 148"
- },
- "https://github.com/obra/superpowers": {
-  "pop": 663,
-  "metric": "★ 663"
- },
- "https://github.com/microsoft/generative-ai-for-beginners": {
-  "pop": 783,
-  "metric": "★ 783"
- },
- "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731": {
-  "pop": 3329,
-  "metric": "♥ 3,329 · 1.4M 다운로드"
- },
- "https://huggingface.co/MiniMaxAI/MiniMax-H3": {
-  "pop": 3925,
-  "metric": "♥ 3,925 · 2M 다운로드"
- },
- "https://huggingface.co/moonshotai/Kimi-K3": {
-  "pop": 10407,
-  "metric": "♥ 10,407 · 1.5M 다운로드"
- },
- "https://huggingface.co/Comfy-Org/MiniMax-H3": {
-  "pop": 1211,
-  "metric": "♥ 1,211 · 6.8M 다운로드"
- },
- "https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF": {
-  "pop": 1523,
-  "metric": "♥ 1,523 · 1.6M 다운로드"
- },
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-04 · URL별 최신값",
  "https://github.com/PrimeIntellect-ai/prime-agent": {
   "pop": 2642,
   "metric": "★ 2,642"
@@ -59,6 +19,22 @@
  "https://github.com/ZhuLinsen/daily_stock_analysis": {
   "pop": 243,
   "metric": "★ 243"
+ },
+ "https://huggingface.co/MiniMaxAI/MiniMax-H3": {
+  "pop": 3925,
+  "metric": "♥ 3,925 · 2M 다운로드"
+ },
+ "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731": {
+  "pop": 3329,
+  "metric": "♥ 3,329 · 1.4M 다운로드"
+ },
+ "https://huggingface.co/Comfy-Org/MiniMax-H3": {
+  "pop": 1211,
+  "metric": "♥ 1,211 · 6.8M 다운로드"
+ },
+ "https://huggingface.co/moonshotai/Kimi-K3": {
+  "pop": 10407,
+  "metric": "♥ 10,407 · 1.5M 다운로드"
  },
  "https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora": {
   "pop": 695,
@@ -155,6 +131,10 @@
  "https://github.com/volcengine/OpenViking": {
   "pop": 804,
   "metric": "★ 804"
+ },
+ "https://github.com/obra/superpowers": {
+  "pop": 663,
+  "metric": "★ 663"
  },
  "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813": {
   "pop": 642,
@@ -381,8 +361,8 @@
   "metric": "♥ 811 · 5K 다운로드"
  },
  "https://github.com/JustVugg/colibri": {
-  "pop": 2026,
-  "metric": "★ 2,026"
+  "pop": 803,
+  "metric": "★ 803"
  },
  "https://github.com/tech-leads-club/agent-skills": {
   "pop": 265,
@@ -492,6 +472,10 @@
   "pop": 354,
   "metric": "★ 354"
  },
+ "https://github.com/zhaoxuya520/reverse-skill": {
+  "pop": 409,
+  "metric": "★ 409"
+ },
  "https://github.com/mvschwarz/openrig": {
   "pop": 640,
   "metric": "★ 640"
@@ -529,8 +513,8 @@
   "metric": "♥ 2,089 · 15K 다운로드"
  },
  "https://github.com/thedotmack/claude-mem": {
-  "pop": 1799,
-  "metric": "★ 1,799"
+  "pop": 1138,
+  "metric": "★ 1,138"
  },
  "https://huggingface.co/Cloudflare/clef-flash": {
   "pop": 590,
@@ -629,8 +613,8 @@
   "metric": "♥ 887 · 15K 다운로드"
  },
  "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017": {
-  "pop": 4694,
-  "metric": "♥ 4,694 · 177K 다운로드"
+  "pop": 4847,
+  "metric": "♥ 4,847 · 187K 다운로드"
  },
  "https://github.com/Comfy-Org/ComfyUI": {
   "pop": 1201,
@@ -717,8 +701,8 @@
   "metric": "♥ 450 · 13K 다운로드"
  },
  "https://huggingface.co/LiquidAI/LFM3-1.7B": {
-  "pop": 993,
-  "metric": "♥ 993 · 42K 다운로드"
+  "pop": 1399,
+  "metric": "♥ 1,399 · 48K 다운로드"
  },
  "https://github.com/CopilotKit/OpenBot": {
   "pop": 707,
@@ -729,8 +713,8 @@
   "metric": "★ 108"
  },
  "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B": {
-  "pop": 678,
-  "metric": "♥ 678 · 32K 다운로드"
+  "pop": 737,
+  "metric": "♥ 737 · 39K 다운로드"
  },
  "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF": {
   "pop": 507,
@@ -745,8 +729,8 @@
   "metric": "★ 827"
  },
  "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B": {
-  "pop": 1499,
-  "metric": "♥ 1,499 · 6K 다운로드"
+  "pop": 1543,
+  "metric": "♥ 1,543 · 7K 다운로드"
  },
  "https://github.com/shiyu-coder/Kronos": {
   "pop": 855,
@@ -757,8 +741,8 @@
   "metric": "★ 88"
  },
  "https://github.com/vercel-labs/agent-desktop": {
-  "pop": 2243,
-  "metric": "★ 2,243"
+  "pop": 3792,
+  "metric": "★ 3,792"
  },
  "https://github.com/FlashML-org/FreeToken": {
   "pop": 654,
@@ -767,5 +751,17 @@
  "https://huggingface.co/baidu/Unlimited-OCR-2": {
   "pop": 561,
   "metric": "♥ 561 · 148K 다운로드"
+ },
+ "https://github.com/max-sixty/worktrunk": {
+  "pop": 437,
+  "metric": "★ 437"
+ },
+ "https://github.com/p-e-w/heretic": {
+  "pop": 699,
+  "metric": "★ 699"
+ },
+ "https://huggingface.co/speridlabs/idol": {
+  "pop": 508,
+  "metric": "♥ 508 · 11K 다운로드"
  }
 }
