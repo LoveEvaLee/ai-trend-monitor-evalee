@@ -1,5 +1,5 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-04 · URL별 최신값",
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-05 · URL별 최신값",
  "https://github.com/PrimeIntellect-ai/prime-agent": {
   "pop": 2642,
   "metric": "★ 2,642"
@@ -513,8 +513,8 @@
   "metric": "♥ 2,089 · 15K 다운로드"
  },
  "https://github.com/thedotmack/claude-mem": {
-  "pop": 1138,
-  "metric": "★ 1,138"
+  "pop": 1165,
+  "metric": "★ 1,165"
  },
  "https://huggingface.co/Cloudflare/clef-flash": {
   "pop": 590,
@@ -613,8 +613,8 @@
   "metric": "♥ 887 · 15K 다운로드"
  },
  "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017": {
-  "pop": 4847,
-  "metric": "♥ 4,847 · 187K 다운로드"
+  "pop": 5265,
+  "metric": "♥ 5,265 · 222K 다운로드"
  },
  "https://github.com/Comfy-Org/ComfyUI": {
   "pop": 1201,
@@ -701,8 +701,8 @@
   "metric": "♥ 450 · 13K 다운로드"
  },
  "https://huggingface.co/LiquidAI/LFM3-1.7B": {
-  "pop": 1399,
-  "metric": "♥ 1,399 · 48K 다운로드"
+  "pop": 1485,
+  "metric": "♥ 1,485 · 55K 다운로드"
  },
  "https://github.com/CopilotKit/OpenBot": {
   "pop": 707,
@@ -713,8 +713,8 @@
   "metric": "★ 108"
  },
  "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B": {
-  "pop": 737,
-  "metric": "♥ 737 · 39K 다운로드"
+  "pop": 1483,
+  "metric": "♥ 1,483 · 45K 다운로드"
  },
  "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF": {
   "pop": 507,
@@ -729,8 +729,8 @@
   "metric": "★ 827"
  },
  "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B": {
-  "pop": 1543,
-  "metric": "♥ 1,543 · 7K 다운로드"
+  "pop": 1589,
+  "metric": "♥ 1,589 · 8K 다운로드"
  },
  "https://github.com/shiyu-coder/Kronos": {
   "pop": 855,
@@ -741,8 +741,8 @@
   "metric": "★ 88"
  },
  "https://github.com/vercel-labs/agent-desktop": {
-  "pop": 3792,
-  "metric": "★ 3,792"
+  "pop": 2463,
+  "metric": "★ 2,463"
  },
  "https://github.com/FlashML-org/FreeToken": {
   "pop": 654,
@@ -753,15 +753,23 @@
   "metric": "♥ 561 · 148K 다운로드"
  },
  "https://github.com/max-sixty/worktrunk": {
-  "pop": 437,
-  "metric": "★ 437"
+  "pop": 524,
+  "metric": "★ 524"
  },
  "https://github.com/p-e-w/heretic": {
   "pop": 699,
   "metric": "★ 699"
  },
  "https://huggingface.co/speridlabs/idol": {
-  "pop": 508,
-  "metric": "♥ 508 · 11K 다운로드"
+  "pop": 616,
+  "metric": "♥ 616 · 15K 다운로드"
+ },
+ "https://github.com/NVIDIA/auto-ontology": {
+  "pop": 2053,
+  "metric": "★ 2,053"
+ },
+ "https://github.com/The-PR-Agent/pr-agent": {
+  "pop": 279,
+  "metric": "★ 279"
  }
 }
