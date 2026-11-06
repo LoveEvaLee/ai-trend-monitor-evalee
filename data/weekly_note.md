@@ -1,2 +1,2 @@
-[논문 · 2026-11-05] 오늘 수집분(175편)은 대부분 키워드 우연 일치로 걸린 무관 논문이었음. 그중 가장 축에 직결되는 1픽은 저자원 로마자 우르두어 혐오표현 탐지에서 파인튜닝 대신 프롬프트 엔지니어링·프롬프트 튜닝 성능을 비교평가한 연구(②LLM분류 축) — IJHCS 타겟 논문의 방법론 비교군으로 참고할 만함.
-[트렌드 · 2026-11-05] 오늘의 1픽: OpenAI가 자율 파이프라인으로 리눅스 커널 권한상승 취약점 948건을 찾아 패치까지 만들어냈다 — 에이전트가 사람 리뷰 없이 실제 커널 보안 작업을 해내는 수준에 도달했다는 신호.
+[논문 · 2026-11-06] 오늘의 1픽: 'Monitoring service operations in digital banking platform ecosystems through theory-guided LLM analytics'(Technological Forecasting and Social Change) — 비정형 텍스트를 LLM으로 구조화해 SEM 설명모형에 투입하는 'LLM-SEM' 프레임워크로, LLM 분류/오류예측(②)과 조직 AI 수용/SEM(③) 두 축을 한 논문에서 교차시켜 방법론적으로 참고할 가치가 크다.
+[트렌드 · 2026-11-06] Factory가 한 달 새 세 번째 AI 코딩 스타트업(HumanLayer)을 인수하며 코딩 에이전트 생태계 통합이 가속화되는 한편, Claude Code의 이메일 주소 유출 이슈가 불거지며 에이전트 보안이 다시 화두로 떠올랐다.
