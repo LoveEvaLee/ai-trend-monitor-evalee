@@ -1,2 +1,2 @@
-[논문 · 2026-11-06] 오늘의 1픽: 'Monitoring service operations in digital banking platform ecosystems through theory-guided LLM analytics'(Technological Forecasting and Social Change) — 비정형 텍스트를 LLM으로 구조화해 SEM 설명모형에 투입하는 'LLM-SEM' 프레임워크로, LLM 분류/오류예측(②)과 조직 AI 수용/SEM(③) 두 축을 한 논문에서 교차시켜 방법론적으로 참고할 가치가 크다.
-[트렌드 · 2026-11-06] Factory가 한 달 새 세 번째 AI 코딩 스타트업(HumanLayer)을 인수하며 코딩 에이전트 생태계 통합이 가속화되는 한편, Claude Code의 이메일 주소 유출 이슈가 불거지며 에이전트 보안이 다시 화두로 떠올랐다.
+[논문 · 2026-11-07] 오늘은 ACM Multimedia 2026 발표 논문이 다수 수집됐는데, 그중 'Are Independently Estimated View Uncertainties Comparable?'는 멀티뷰 분류에서 뷰별로 독립 추정된 불확도를 그대로 합산하면 안 되고 교정(calibration)이 필요하다는 점을 보여 LLM 분류 신뢰도·오류예측 축에 바로 참고할 만하다.
+[트렌드 · 2026-11-07] 오늘의 1픽은 arXiv 'Skillware' 논문 — 에이전트에게 느슨한 텍스트 프롬프트 대신 타입 입력 계약·결정적 코드·테스트가 포함된 모듈형 '스킬 번들'을 장착시키자는 제안으로, 지금 쓰고 있는 SKILL.md 기반 체계(아르고스·헤르메스)가 나아갈 다음 방향을 구체적으로 보여준다.

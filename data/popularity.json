@@ -1,5 +1,5 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-06 · URL별 최신값",
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-07 · URL별 최신값",
  "https://github.com/PrimeIntellect-ai/prime-agent": {
   "pop": 2642,
   "metric": "★ 2,642"
@@ -65,8 +65,8 @@
   "metric": "★ 1,543"
  },
  "https://huggingface.co/Lightricks/LTX-2.5": {
-  "pop": 10724,
-  "metric": "♥ 10,724 · 2.6M 다운로드"
+  "pop": 10858,
+  "metric": "♥ 10,858 · 2.6M 다운로드"
  },
  "https://github.com/anthropics/skills": {
   "pop": 231,
@@ -401,8 +401,8 @@
   "metric": "★ 135"
  },
  "https://github.com/cloudflare/security-audit-skill": {
-  "pop": 2874,
-  "metric": "★ 2,874"
+  "pop": 2524,
+  "metric": "★ 2,524"
  },
  "https://github.com/anthropics/claude-code": {
   "pop": 419,
@@ -761,12 +761,12 @@
   "metric": "★ 699"
  },
  "https://huggingface.co/speridlabs/idol": {
-  "pop": 765,
-  "metric": "♥ 765 · 17K 다운로드"
+  "pop": 933,
+  "metric": "♥ 933 · 19K 다운로드"
  },
  "https://github.com/NVIDIA/auto-ontology": {
-  "pop": 2707,
-  "metric": "★ 2,707"
+  "pop": 2005,
+  "metric": "★ 2,005"
  },
  "https://github.com/The-PR-Agent/pr-agent": {
   "pop": 279,
@@ -781,15 +781,23 @@
   "metric": "★ 242"
  },
  "https://huggingface.co/moonshotai/Kimi-K3.1-Pro": {
-  "pop": 912,
-  "metric": "♥ 912 · 12K 다운로드"
+  "pop": 1485,
+  "metric": "♥ 1,485 · 18K 다운로드"
  },
  "https://huggingface.co/Pika-Labs/Pika-H3-Flex": {
   "pop": 472,
   "metric": "♥ 472 · 863 다운로드"
  },
  "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder": {
-  "pop": 700,
-  "metric": "♥ 700 · 157K 다운로드"
+  "pop": 787,
+  "metric": "♥ 787 · 190K 다운로드"
+ },
+ "https://github.com/google/skills": {
+  "pop": 532,
+  "metric": "★ 532"
+ },
+ "https://huggingface.co/burner22/numbat": {
+  "pop": 371,
+  "metric": "♥ 371 · 9K 다운로드"
  }
 }
