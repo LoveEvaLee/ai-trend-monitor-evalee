@@ -1,2 +1,2 @@
-[논문 · 2026-11-07] 오늘은 ACM Multimedia 2026 발표 논문이 다수 수집됐는데, 그중 'Are Independently Estimated View Uncertainties Comparable?'는 멀티뷰 분류에서 뷰별로 독립 추정된 불확도를 그대로 합산하면 안 되고 교정(calibration)이 필요하다는 점을 보여 LLM 분류 신뢰도·오류예측 축에 바로 참고할 만하다.
-[트렌드 · 2026-11-07] 오늘의 1픽은 arXiv 'Skillware' 논문 — 에이전트에게 느슨한 텍스트 프롬프트 대신 타입 입력 계약·결정적 코드·테스트가 포함된 모듈형 '스킬 번들'을 장착시키자는 제안으로, 지금 쓰고 있는 SKILL.md 기반 체계(아르고스·헤르메스)가 나아갈 다음 방향을 구체적으로 보여준다.
+[논문 · 2026-11-08] 오늘의 1픽: Students' intentions to truthfully declare generative AI use in higher education assessment — 계획행동이론(TPB)과 억제이론을 통합한 SEM으로 대학생의 생성형 AI 사용 정직신고 의도를 설명, ③조직/개인 AI수용 축(SEM 방법론)에 직접 참고할 수 있는 모델링 사례.
+[트렌드 · 2026-11-08] Claude Code의 '다시 묻지 않기' 권한 설정이 깃허브 공개 저장소 1,122개에서 비밀번호 유출로 이어졌다는 보안 리서치가 나왔다 — 에이전트 권한 자동승인 기능을 쓰는 모든 하네스가 오늘 점검해야 할 경고 신호다.
