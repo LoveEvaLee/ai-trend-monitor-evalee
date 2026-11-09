@@ -1,12 +1,8 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-08 · URL별 최신값",
- "https://github.com/PrimeIntellect-ai/prime-agent": {
-  "pop": 2642,
-  "metric": "★ 2,642"
- },
- "https://github.com/vitali87/code-graph-rag": {
-  "pop": 341,
-  "metric": "★ 341"
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-09 · URL별 최신값",
+ "https://github.com/semantica-agi/semantica": {
+  "pop": 713,
+  "metric": "★ 713"
  },
  "https://github.com/msitarzewski/agency-agents": {
   "pop": 1873,
@@ -16,9 +12,13 @@
   "pop": 523,
   "metric": "★ 523"
  },
- "https://github.com/ZhuLinsen/daily_stock_analysis": {
-  "pop": 243,
-  "metric": "★ 243"
+ "https://github.com/PrimeIntellect-ai/prime-agent": {
+  "pop": 2642,
+  "metric": "★ 2,642"
+ },
+ "https://github.com/danielmiessler/LifeOS": {
+  "pop": 315,
+  "metric": "★ 315"
  },
  "https://huggingface.co/MiniMaxAI/MiniMax-H3": {
   "pop": 3925,
@@ -28,29 +28,25 @@
   "pop": 3329,
   "metric": "♥ 3,329 · 1.4M 다운로드"
  },
+ "https://huggingface.co/meta-models/Muse-Glimmer-30B": {
+  "pop": 1522,
+  "metric": "♥ 1,522 · 165K 다운로드"
+ },
  "https://huggingface.co/Comfy-Org/MiniMax-H3": {
   "pop": 1211,
   "metric": "♥ 1,211 · 6.8M 다운로드"
- },
- "https://huggingface.co/moonshotai/Kimi-K3": {
-  "pop": 10407,
-  "metric": "♥ 10,407 · 1.5M 다운로드"
  },
  "https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora": {
   "pop": 695,
   "metric": "♥ 695"
  },
- "https://github.com/semantica-agi/semantica": {
-  "pop": 713,
-  "metric": "★ 713"
+ "https://github.com/ZhuLinsen/daily_stock_analysis": {
+  "pop": 243,
+  "metric": "★ 243"
  },
- "https://github.com/danielmiessler/LifeOS": {
-  "pop": 315,
-  "metric": "★ 315"
- },
- "https://huggingface.co/meta-models/Muse-Glimmer-30B": {
-  "pop": 1522,
-  "metric": "♥ 1,522 · 165K 다운로드"
+ "https://github.com/vitali87/code-graph-rag": {
+  "pop": 341,
+  "metric": "★ 341"
  },
  "https://github.com/cathrynlavery/diagram-design": {
   "pop": 1815,
@@ -69,8 +65,8 @@
   "metric": "♥ 10,987 · 2.6M 다운로드"
  },
  "https://github.com/anthropics/skills": {
-  "pop": 386,
-  "metric": "★ 386"
+  "pop": 793,
+  "metric": "★ 793"
  },
  "https://github.com/cactus-compute/needle": {
   "pop": 662,
@@ -761,8 +757,8 @@
   "metric": "★ 699"
  },
  "https://huggingface.co/speridlabs/idol": {
-  "pop": 1107,
-  "metric": "♥ 1,107 · 21K 다운로드"
+  "pop": 1376,
+  "metric": "♥ 1,376 · 23K 다운로드"
  },
  "https://github.com/NVIDIA/auto-ontology": {
   "pop": 2005,
@@ -781,16 +777,16 @@
   "metric": "★ 242"
  },
  "https://huggingface.co/moonshotai/Kimi-K3.1-Pro": {
-  "pop": 1628,
-  "metric": "♥ 1,628 · 23K 다운로드"
+  "pop": 1726,
+  "metric": "♥ 1,726 · 26K 다운로드"
  },
  "https://huggingface.co/Pika-Labs/Pika-H3-Flex": {
   "pop": 472,
   "metric": "♥ 472 · 863 다운로드"
  },
  "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder": {
-  "pop": 871,
-  "metric": "♥ 871 · 222K 다운로드"
+  "pop": 917,
+  "metric": "♥ 917 · 254K 다운로드"
  },
  "https://github.com/google/skills": {
   "pop": 449,
@@ -801,15 +797,27 @@
   "metric": "♥ 371 · 9K 다운로드"
  },
  "https://github.com/vercel-labs/agent-browser": {
-  "pop": 180,
-  "metric": "★ 180"
+  "pop": 812,
+  "metric": "★ 812"
  },
  "https://github.com/meta/astryx": {
-  "pop": 185,
-  "metric": "★ 185"
+  "pop": 863,
+  "metric": "★ 863"
  },
  "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic": {
-  "pop": 472,
-  "metric": "♥ 472 · 1K 다운로드"
+  "pop": 829,
+  "metric": "♥ 829 · 7K 다운로드"
+ },
+ "https://github.com/dsx-ai-factory/nvke": {
+  "pop": 345,
+  "metric": "★ 345"
+ },
+ "https://github.com/anthropics/claude-quickstarts": {
+  "pop": 28,
+  "metric": "★ 28"
+ },
+ "https://huggingface.co/ricursiveAI/Ripple-65B-Preview": {
+  "pop": 400,
+  "metric": "♥ 400 · 5K 다운로드"
  }
 }
