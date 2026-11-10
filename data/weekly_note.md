@@ -1,2 +1,2 @@
-[논문 · 2026-11-09] 오늘 수집분 중에서는 LLM 에이전트가 오류 메시지를 어떻게 신뢰하고 추론에 반영하는지를 사전등록(pre-registration) 실험으로 검증한 연구가 가장 눈에 띄며, LLM 분류/오류예측(②) 축과 직결되는 신규 방법론적 시사점을 제공한다.
-[트렌드 · 2026-11-09] 골드만삭스가 뱅커·트레이더 조직에서 Claude Code 사용을 철회했다는 보도가 HN 526점으로 가장 뜨거웠다 — 엔터프라이즈 AI 코딩 에이전트 도입의 현실적 제약(거버넌스·감사)을 보여주는 사례.
+[논문 · 2026-11-10] 오늘의 1픽: 「Enforcing Narrative Reliability and Epistemic Pacing in LLM-Driven Detective Games via Structured Knowledge Trees」— 구조화된 지식 트리와 3-에이전트 LLM 파이프라인으로 정보 공개 순서를 통제해 치명적 환각을 64.78% 줄이고 조기 서사 노출을 완전히 차단한 사례로, LLM 오류예측/오류억제 설계(축②)에 바로 참고할 수 있다.
+[트렌드 · 2026-11-10] 오늘의 1픽: Anthropic이 코딩 성능을 끌어올리고 가격까지 낮춘 Claude Fable 5.2·Mythos 5.2를 공개해 Artificial Analysis 역대 최고점을 찍었다 — 지금 바로 하네스를 업그레이드해볼 가치가 있다.

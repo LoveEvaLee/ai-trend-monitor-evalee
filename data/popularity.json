@@ -1,44 +1,16 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-09 · URL별 최신값",
- "https://github.com/semantica-agi/semantica": {
-  "pop": 713,
-  "metric": "★ 713"
- },
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-10 · URL별 최신값",
  "https://github.com/msitarzewski/agency-agents": {
   "pop": 1873,
   "metric": "★ 1,873"
  },
+ "https://github.com/semantica-agi/semantica": {
+  "pop": 713,
+  "metric": "★ 713"
+ },
  "https://github.com/addyosmani/agent-skills": {
   "pop": 523,
   "metric": "★ 523"
- },
- "https://github.com/PrimeIntellect-ai/prime-agent": {
-  "pop": 2642,
-  "metric": "★ 2,642"
- },
- "https://github.com/danielmiessler/LifeOS": {
-  "pop": 315,
-  "metric": "★ 315"
- },
- "https://huggingface.co/MiniMaxAI/MiniMax-H3": {
-  "pop": 3925,
-  "metric": "♥ 3,925 · 2M 다운로드"
- },
- "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731": {
-  "pop": 3329,
-  "metric": "♥ 3,329 · 1.4M 다운로드"
- },
- "https://huggingface.co/meta-models/Muse-Glimmer-30B": {
-  "pop": 1522,
-  "metric": "♥ 1,522 · 165K 다운로드"
- },
- "https://huggingface.co/Comfy-Org/MiniMax-H3": {
-  "pop": 1211,
-  "metric": "♥ 1,211 · 6.8M 다운로드"
- },
- "https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora": {
-  "pop": 695,
-  "metric": "♥ 695"
  },
  "https://github.com/ZhuLinsen/daily_stock_analysis": {
   "pop": 243,
@@ -47,6 +19,26 @@
  "https://github.com/vitali87/code-graph-rag": {
   "pop": 341,
   "metric": "★ 341"
+ },
+ "https://huggingface.co/MiniMaxAI/MiniMax-H3": {
+  "pop": 3925,
+  "metric": "♥ 3,925 · 2M 다운로드"
+ },
+ "https://huggingface.co/meta-models/Muse-Glimmer-30B": {
+  "pop": 1522,
+  "metric": "♥ 1,522 · 165K 다운로드"
+ },
+ "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731": {
+  "pop": 3329,
+  "metric": "♥ 3,329 · 1.4M 다운로드"
+ },
+ "https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora": {
+  "pop": 695,
+  "metric": "♥ 695"
+ },
+ "https://huggingface.co/Comfy-Org/MiniMax-H3": {
+  "pop": 1211,
+  "metric": "♥ 1,211 · 6.8M 다운로드"
  },
  "https://github.com/cathrynlavery/diagram-design": {
   "pop": 1815,
@@ -61,12 +53,12 @@
   "metric": "★ 1,543"
  },
  "https://huggingface.co/Lightricks/LTX-2.5": {
-  "pop": 10987,
-  "metric": "♥ 10,987 · 2.6M 다운로드"
+  "pop": 11261,
+  "metric": "♥ 11,261 · 2.7M 다운로드"
  },
  "https://github.com/anthropics/skills": {
-  "pop": 793,
-  "metric": "★ 793"
+  "pop": 1052,
+  "metric": "★ 1,052"
  },
  "https://github.com/cactus-compute/needle": {
   "pop": 662,
@@ -757,8 +749,8 @@
   "metric": "★ 699"
  },
  "https://huggingface.co/speridlabs/idol": {
-  "pop": 1376,
-  "metric": "♥ 1,376 · 23K 다운로드"
+  "pop": 1620,
+  "metric": "♥ 1,620 · 25K 다운로드"
  },
  "https://github.com/NVIDIA/auto-ontology": {
   "pop": 2005,
@@ -777,8 +769,8 @@
   "metric": "★ 242"
  },
  "https://huggingface.co/moonshotai/Kimi-K3.1-Pro": {
-  "pop": 1726,
-  "metric": "♥ 1,726 · 26K 다운로드"
+  "pop": 1794,
+  "metric": "♥ 1,794 · 28K 다운로드"
  },
  "https://huggingface.co/Pika-Labs/Pika-H3-Flex": {
   "pop": 472,
@@ -797,27 +789,31 @@
   "metric": "♥ 371 · 9K 다운로드"
  },
  "https://github.com/vercel-labs/agent-browser": {
-  "pop": 812,
-  "metric": "★ 812"
+  "pop": 914,
+  "metric": "★ 914"
  },
  "https://github.com/meta/astryx": {
-  "pop": 863,
-  "metric": "★ 863"
+  "pop": 3324,
+  "metric": "★ 3,324"
  },
  "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic": {
-  "pop": 829,
-  "metric": "♥ 829 · 7K 다운로드"
+  "pop": 1034,
+  "metric": "♥ 1,034 · 12K 다운로드"
  },
  "https://github.com/dsx-ai-factory/nvke": {
   "pop": 345,
   "metric": "★ 345"
  },
  "https://github.com/anthropics/claude-quickstarts": {
-  "pop": 28,
-  "metric": "★ 28"
+  "pop": 560,
+  "metric": "★ 560"
  },
  "https://huggingface.co/ricursiveAI/Ripple-65B-Preview": {
-  "pop": 400,
-  "metric": "♥ 400 · 5K 다운로드"
+  "pop": 453,
+  "metric": "♥ 453 · 6K 다운로드"
+ },
+ "https://github.com/garrytan/gbrain": {
+  "pop": 215,
+  "metric": "★ 215"
  }
 }
