@@ -1,2 +1,2 @@
-[논문 · 2026-11-10] 오늘의 1픽: 「Enforcing Narrative Reliability and Epistemic Pacing in LLM-Driven Detective Games via Structured Knowledge Trees」— 구조화된 지식 트리와 3-에이전트 LLM 파이프라인으로 정보 공개 순서를 통제해 치명적 환각을 64.78% 줄이고 조기 서사 노출을 완전히 차단한 사례로, LLM 오류예측/오류억제 설계(축②)에 바로 참고할 수 있다.
-[트렌드 · 2026-11-10] 오늘의 1픽: Anthropic이 코딩 성능을 끌어올리고 가격까지 낮춘 Claude Fable 5.2·Mythos 5.2를 공개해 Artificial Analysis 역대 최고점을 찍었다 — 지금 바로 하네스를 업그레이드해볼 가치가 있다.
+[논문 · 2026-11-11] 오늘의 1픽: IJHCS에 실린 'Evaluating AI Alignment in LLMs'(75개 모델 대상 가치우선순위 벤치마킹) — 투고 타겟 저널에 실린 LLM 평가 설계 선행연구로, 오류예측 축 논문의 벤치마크 설계에 바로 참조할 만함. 이 외 조직 AI 수용(③) 축에서 TAM/UTAUT 확장 연구가 4편(높음)으로 가장 풍성하게 수집됨.
+[트렌드 · 2026-11-11] 오늘의 1픽: Claude Fable 5.2·Mythos 5.2 공개 — Anthropic IPO 로드쇼 날 나온 신모델이 '세계 1위 LLM 재탈환' 평가를 받으며, Claude Code 하네스에 가장 먼저 반영해볼 만한 업그레이드다.

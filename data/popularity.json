@@ -1,45 +1,5 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-10 · URL별 최신값",
- "https://github.com/msitarzewski/agency-agents": {
-  "pop": 1873,
-  "metric": "★ 1,873"
- },
- "https://github.com/semantica-agi/semantica": {
-  "pop": 713,
-  "metric": "★ 713"
- },
- "https://github.com/addyosmani/agent-skills": {
-  "pop": 523,
-  "metric": "★ 523"
- },
- "https://github.com/ZhuLinsen/daily_stock_analysis": {
-  "pop": 243,
-  "metric": "★ 243"
- },
- "https://github.com/vitali87/code-graph-rag": {
-  "pop": 341,
-  "metric": "★ 341"
- },
- "https://huggingface.co/MiniMaxAI/MiniMax-H3": {
-  "pop": 3925,
-  "metric": "♥ 3,925 · 2M 다운로드"
- },
- "https://huggingface.co/meta-models/Muse-Glimmer-30B": {
-  "pop": 1522,
-  "metric": "♥ 1,522 · 165K 다운로드"
- },
- "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731": {
-  "pop": 3329,
-  "metric": "♥ 3,329 · 1.4M 다운로드"
- },
- "https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora": {
-  "pop": 695,
-  "metric": "♥ 695"
- },
- "https://huggingface.co/Comfy-Org/MiniMax-H3": {
-  "pop": 1211,
-  "metric": "♥ 1,211 · 6.8M 다운로드"
- },
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-11 · URL별 최신값",
  "https://github.com/cathrynlavery/diagram-design": {
   "pop": 1815,
   "metric": "★ 1,815"
@@ -48,17 +8,41 @@
   "pop": 117,
   "metric": "★ 117"
  },
+ "https://github.com/semantica-agi/semantica": {
+  "pop": 713,
+  "metric": "★ 713"
+ },
  "https://github.com/stablyai/orca": {
   "pop": 1543,
   "metric": "★ 1,543"
  },
+ "https://github.com/msitarzewski/agency-agents": {
+  "pop": 1873,
+  "metric": "★ 1,873"
+ },
+ "https://huggingface.co/meta-models/Muse-Glimmer-30B": {
+  "pop": 1522,
+  "metric": "♥ 1,522 · 165K 다운로드"
+ },
+ "https://huggingface.co/MiniMaxAI/MiniMax-H3": {
+  "pop": 3925,
+  "metric": "♥ 3,925 · 2M 다운로드"
+ },
+ "https://huggingface.co/larryvrh/MiniMax-H3-Turbo-Lora": {
+  "pop": 695,
+  "metric": "♥ 695"
+ },
+ "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731": {
+  "pop": 3329,
+  "metric": "♥ 3,329 · 1.4M 다운로드"
+ },
  "https://huggingface.co/Lightricks/LTX-2.5": {
-  "pop": 11261,
-  "metric": "♥ 11,261 · 2.7M 다운로드"
+  "pop": 11375,
+  "metric": "♥ 11,375 · 2.8M 다운로드"
  },
  "https://github.com/anthropics/skills": {
-  "pop": 1052,
-  "metric": "★ 1,052"
+  "pop": 1676,
+  "metric": "★ 1,676"
  },
  "https://github.com/cactus-compute/needle": {
   "pop": 662,
@@ -383,6 +367,10 @@
  "https://github.com/danny-avila/LibreChat": {
   "pop": 254,
   "metric": "★ 254"
+ },
+ "https://github.com/addyosmani/agent-skills": {
+  "pop": 465,
+  "metric": "★ 465"
  },
  "https://github.com/BuilderIO/agent-native": {
   "pop": 135,
@@ -749,8 +737,8 @@
   "metric": "★ 699"
  },
  "https://huggingface.co/speridlabs/idol": {
-  "pop": 1620,
-  "metric": "♥ 1,620 · 25K 다운로드"
+  "pop": 1867,
+  "metric": "♥ 1,867 · 26K 다운로드"
  },
  "https://github.com/NVIDIA/auto-ontology": {
   "pop": 2005,
@@ -769,8 +757,8 @@
   "metric": "★ 242"
  },
  "https://huggingface.co/moonshotai/Kimi-K3.1-Pro": {
-  "pop": 1794,
-  "metric": "♥ 1,794 · 28K 다운로드"
+  "pop": 1867,
+  "metric": "♥ 1,867 · 31K 다운로드"
  },
  "https://huggingface.co/Pika-Labs/Pika-H3-Flex": {
   "pop": 472,
@@ -793,27 +781,31 @@
   "metric": "★ 914"
  },
  "https://github.com/meta/astryx": {
-  "pop": 3324,
-  "metric": "★ 3,324"
+  "pop": 3111,
+  "metric": "★ 3,111"
  },
  "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic": {
-  "pop": 1034,
-  "metric": "♥ 1,034 · 12K 다운로드"
+  "pop": 1189,
+  "metric": "♥ 1,189 · 14K 다운로드"
  },
  "https://github.com/dsx-ai-factory/nvke": {
   "pop": 345,
   "metric": "★ 345"
  },
  "https://github.com/anthropics/claude-quickstarts": {
-  "pop": 560,
-  "metric": "★ 560"
+  "pop": 530,
+  "metric": "★ 530"
  },
  "https://huggingface.co/ricursiveAI/Ripple-65B-Preview": {
-  "pop": 453,
-  "metric": "♥ 453 · 6K 다운로드"
+  "pop": 485,
+  "metric": "♥ 485 · 6K 다운로드"
  },
  "https://github.com/garrytan/gbrain": {
   "pop": 215,
   "metric": "★ 215"
+ },
+ "https://github.com/homeassistant-ai/ha-mcp": {
+  "pop": 792,
+  "metric": "★ 792"
  }
 }
