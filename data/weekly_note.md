@@ -1,2 +1,2 @@
-[논문 · 2026-11-13] 오늘의 1픽: 'Real-Time Hallucination Detection in Resource-Constrained LLMs via Logit-Level Shannon Entropy Mapping' — 소프트맥스 이전 로짓의 Shannon 엔트로피를 단일 패스로 측정해 8GB RAM급 엣지 환경에서도 SelfCheckGPT 수준(AUROC 0.819)의 환각 탐지를 1.2ms/토큰 오버헤드로 구현한 연구로, ②LLM 분류/오류예측 축에 직결되는 성과다. 전반적으로는 수요예측(①) 축 신규 논문이 없었고, 거버넌스 그룹에서는 멀티에이전트 LLM의 환각 전파를 다룬 논문이 오히려 오류예측 축과 가장 밀접했다.
-[트렌드 · 2026-11-13] 오늘의 1픽: 엔비디아 CEO 젠슨 황이 사임을 발표해(HN 2706pts) AI 반도체 리더십 공백이라는 대형 이슈가 터졌고, 같은 날 구글은 차세대 모델 Gemini 4 Hydrogen과 '결정 전용' Gemini Decisions API를 동시에 선보이며 생성형 너머의 새 제품 축을 제시했다.
+[논문 · 2026-11-14] 오늘의 1픽: LLM에 대한 사용자 신뢰를 측정하는 8문항 척도 'PT-LLM-8' — TrustLLM 프레임워크를 심리측정 도구로 변환해 752명 대상 검증(α=0.90)까지 마친, IJHCS 축(②)에 바로 인용·활용할 수 있는 측정도구.
+[트렌드 · 2026-11-14] 오늘의 1픽: Jensen Huang이 33년 만에 NVIDIA CEO에서 물러나며 AI 하드웨어·오픈소스 생태계 전체에 파장이 일었다 — GPU 가격 하락, 중국 모델의 수출통제 GPU 흔적 포렌식, 'AI 버블 붕괴' 논의까지 같은 날 겹쳤다.
