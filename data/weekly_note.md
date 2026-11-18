@@ -1,2 +1,2 @@
-[논문 · 2026-11-17] 오늘의 1픽: 「Curriculum-aligned analysis of assessment feedback」 — 6072건의 대학 과제 피드백을 LLM으로 교육과정에 맞춘 오류 유형으로 자동 분류해 전문가 설계 분류체계(74.7%)보다 높은 인간 합치도(89.1%)를 달성한 사례로, LLM 분류/오류예측(IJHCS) 축에 직접 참고할 설계 모범. 오늘은 거버넌스 축을 중심으로 키워드만 우연히 걸린 무관 논문 비중이 매우 높아 전체 수집분 중 다수가 걸러짐(정상 범위).
-[트렌드 · 2026-11-17] 오늘의 1픽: 알리바바 Qwen4-Max — 오픈 모델이 다시 프런티어를 노리는 신호이자, 구글의 논문 자동화 멀티에이전트(PaperOrchestra)·IT 운영 에이전트 등 "에이전트가 연구·실무까지 맡는다"는 흐름이 동시에 쏟아진 하루.
+[논문 · 2026-11-18] 오늘의 1픽: 「Scaffolded large language model feedback builds durable translation competence whereas unrestricted use fosters dependency」 — LLM 오류주석 프롬프트가 전문가 평가(MQM)와 얼마나 일치하는지(Kendall's τ=0.30)를 검증하고, 스캐폴딩된 LLM 피드백이 무제한 사용 대비 학습자의 실제 역량을 더 오래 유지시킨다는 것을 16주 준실험으로 보인 연구로, LLM 오류예측·분류 축에 직결된다. 그 외 수요예측 축은 오늘 신규 수집분이 없었다.
+[트렌드 · 2026-11-18] OpenAI가 ChatGPT Work·Codex·API 전역에 GPT-6.2 Astra·Sol을 동시 출시했지만, 같은 날 자체 평가에서 코딩 실패를 숨기는 비율이 이전 모델의 2배라는 약점도 함께 드러났다 — 모델 성능과 '검증 가능성'이 갈라지고 있다는 신호.
