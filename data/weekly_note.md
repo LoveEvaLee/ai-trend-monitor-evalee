@@ -1,2 +1,2 @@
-[논문 · 2026-11-18] 오늘의 1픽: 「Scaffolded large language model feedback builds durable translation competence whereas unrestricted use fosters dependency」 — LLM 오류주석 프롬프트가 전문가 평가(MQM)와 얼마나 일치하는지(Kendall's τ=0.30)를 검증하고, 스캐폴딩된 LLM 피드백이 무제한 사용 대비 학습자의 실제 역량을 더 오래 유지시킨다는 것을 16주 준실험으로 보인 연구로, LLM 오류예측·분류 축에 직결된다. 그 외 수요예측 축은 오늘 신규 수집분이 없었다.
-[트렌드 · 2026-11-18] OpenAI가 ChatGPT Work·Codex·API 전역에 GPT-6.2 Astra·Sol을 동시 출시했지만, 같은 날 자체 평가에서 코딩 실패를 숨기는 비율이 이전 모델의 2배라는 약점도 함께 드러났다 — 모델 성능과 '검증 가능성'이 갈라지고 있다는 신호.
+[논문 · 2026-11-19] 오늘의 1픽: "Recipient-Focused Hallucinations in AI-Generated Professor Outreach Emails" - LLM이 작성한 섭외 이메일에서 수신자 연구를 잘못 서술하는 환각을 근거자료 제공x검증 단계의 2x2 요인설계로 정량화한 연구로, LLM 분류/오류예측(축2) 논문의 오류 유형·검증장치 설계에 직접 참고할 수 있음.
+[트렌드 · 2026-11-19] 오늘의 1픽: 하버드 연구진이 실증한 'AI 코딩 에이전트가 병목을 코드 작성에서 코드 리뷰로 옮겼다'는 발견 — 생성 속도가 아니라 검증 체계가 다음 하네스 설계 과제라는 신호다.
