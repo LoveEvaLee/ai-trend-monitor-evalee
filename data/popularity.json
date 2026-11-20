@@ -1,56 +1,40 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-19 · URL별 최신값",
- "https://github.com/obra/superpowers": {
-  "pop": 663,
-  "metric": "★ 663"
- },
- "https://github.com/santifer/career-ops": {
-  "pop": 921,
-  "metric": "★ 921"
- },
- "https://github.com/akitaonrails/ai-memory": {
-  "pop": 666,
-  "metric": "★ 666"
- },
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-20 · URL별 최신값",
  "https://github.com/harry0703/MoneyPrinterTurbo": {
   "pop": 464,
   "metric": "★ 464"
- },
- "https://github.com/agent-substrate/substrate": {
-  "pop": 301,
-  "metric": "★ 301"
- },
- "https://huggingface.co/Qwen/Qwen3.8-27B": {
-  "pop": 20422,
-  "metric": "♥ 20,422 · 6.9M 다운로드"
- },
- "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF": {
-  "pop": 3010,
-  "metric": "♥ 3,010 · 7.6M 다운로드"
- },
- "https://huggingface.co/MiniMaxAI/MiniMax-Music3": {
-  "pop": 1104,
-  "metric": "♥ 1,104 · 14K 다운로드"
- },
- "https://huggingface.co/Qwen/Qwen3.8-27B-FP8": {
-  "pop": 633,
-  "metric": "♥ 633 · 1.5M 다운로드"
- },
- "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-MLX": {
-  "pop": 1094,
-  "metric": "♥ 1,094 · 69K 다운로드"
  },
  "https://github.com/PostHog/posthog": {
   "pop": 335,
   "metric": "★ 335"
  },
+ "https://github.com/obra/superpowers": {
+  "pop": 2029,
+  "metric": "★ 2,029"
+ },
+ "https://github.com/santifer/career-ops": {
+  "pop": 921,
+  "metric": "★ 921"
+ },
  "https://github.com/affaan-m/ECC": {
   "pop": 987,
   "metric": "★ 987"
  },
+ "https://huggingface.co/Qwen/Qwen3.8-27B": {
+  "pop": 20680,
+  "metric": "♥ 20,680 · 6.6M 다운로드"
+ },
+ "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF": {
+  "pop": 3010,
+  "metric": "♥ 3,010 · 7.6M 다운로드"
+ },
  "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-FP8": {
   "pop": 1147,
   "metric": "♥ 1,147 · 250K 다운로드"
+ },
+ "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-MLX": {
+  "pop": 1094,
+  "metric": "♥ 1,094 · 69K 다운로드"
  },
  "https://huggingface.co/JonathanColetti/Qwen3.8-27B-Uncensored-GGUF": {
   "pop": 566,
@@ -149,8 +133,8 @@
   "metric": "♥ 668 · 431K 다운로드"
  },
  "https://github.com/jingyaogong/minimind": {
-  "pop": 1005,
-  "metric": "★ 1,005"
+  "pop": 301,
+  "metric": "★ 301"
  },
  "https://github.com/Osmantic/ODS": {
   "pop": 77,
@@ -328,6 +312,10 @@
   "pop": 2898,
   "metric": "♥ 2,898 · 86K 다운로드"
  },
+ "https://github.com/akitaonrails/ai-memory": {
+  "pop": 666,
+  "metric": "★ 666"
+ },
  "https://github.com/zhouxiaoka/autoclip": {
   "pop": 266,
   "metric": "★ 266"
@@ -339,6 +327,10 @@
  "https://github.com/yynxxxxx/Codex-X": {
   "pop": 79,
   "metric": "★ 79"
+ },
+ "https://github.com/agent-substrate/substrate": {
+  "pop": 301,
+  "metric": "★ 301"
  },
  "https://github.com/dream-num/univer": {
   "pop": 1776,
@@ -497,8 +489,8 @@
   "metric": "♥ 1,062 · 76K 다운로드"
  },
  "https://github.com/HKUDS/CLI-Anything": {
-  "pop": 384,
-  "metric": "★ 384"
+  "pop": 899,
+  "metric": "★ 899"
  },
  "https://github.com/ifixai-ai/iFixAi": {
   "pop": 2143,
@@ -797,8 +789,8 @@
   "metric": "♥ 478 · 2.3M 다운로드"
  },
  "https://github.com/elementalsouls/Claude-BugHunter": {
-  "pop": 2322,
-  "metric": "★ 2,322"
+  "pop": 1353,
+  "metric": "★ 1,353"
  },
  "https://github.com/mvanhorn/last30days-skill": {
   "pop": 1062,
@@ -809,8 +801,8 @@
   "metric": "★ 590"
  },
  "https://huggingface.co/higurashi-ai/Haru-4B": {
-  "pop": 667,
-  "metric": "♥ 667 · 5K 다운로드"
+  "pop": 3628,
+  "metric": "♥ 3,628 · 6K 다운로드"
  },
  "https://huggingface.co/thinkingmachines/Inkling-2-Small": {
   "pop": 492,
@@ -825,7 +817,19 @@
   "metric": "★ 1,529"
  },
  "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted": {
-  "pop": 397,
-  "metric": "♥ 397 · 377 다운로드"
+  "pop": 735,
+  "metric": "♥ 735 · 1K 다운로드"
+ },
+ "https://github.com/openvinotoolkit/openvino": {
+  "pop": 246,
+  "metric": "★ 246"
+ },
+ "https://huggingface.co/tencent/Hy4-flash": {
+  "pop": 342,
+  "metric": "♥ 342 · 2K 다운로드"
+ },
+ "https://huggingface.co/apple/FastFrames-L": {
+  "pop": 328,
+  "metric": "♥ 328"
  }
 }
