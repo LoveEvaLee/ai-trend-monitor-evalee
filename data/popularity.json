@@ -1,48 +1,16 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-20 · URL별 최신값",
- "https://github.com/harry0703/MoneyPrinterTurbo": {
-  "pop": 464,
-  "metric": "★ 464"
- },
- "https://github.com/PostHog/posthog": {
-  "pop": 335,
-  "metric": "★ 335"
- },
- "https://github.com/obra/superpowers": {
-  "pop": 2029,
-  "metric": "★ 2,029"
- },
- "https://github.com/santifer/career-ops": {
-  "pop": 921,
-  "metric": "★ 921"
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-21 · URL별 최신값",
+ "https://github.com/openai/codex": {
+  "pop": 1994,
+  "metric": "★ 1,994"
  },
  "https://github.com/affaan-m/ECC": {
   "pop": 987,
   "metric": "★ 987"
  },
- "https://huggingface.co/Qwen/Qwen3.8-27B": {
-  "pop": 20680,
-  "metric": "♥ 20,680 · 6.6M 다운로드"
- },
- "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF": {
-  "pop": 3010,
-  "metric": "♥ 3,010 · 7.6M 다운로드"
- },
- "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-FP8": {
-  "pop": 1147,
-  "metric": "♥ 1,147 · 250K 다운로드"
- },
- "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-MLX": {
-  "pop": 1094,
-  "metric": "♥ 1,094 · 69K 다운로드"
- },
- "https://huggingface.co/JonathanColetti/Qwen3.8-27B-Uncensored-GGUF": {
-  "pop": 566,
-  "metric": "♥ 566 · 1.1M 다운로드"
- },
- "https://github.com/openai/codex": {
-  "pop": 1994,
-  "metric": "★ 1,994"
+ "https://github.com/obra/superpowers": {
+  "pop": 888,
+  "metric": "★ 888"
  },
  "https://github.com/Wei-Shaw/sub2api": {
   "pop": 278,
@@ -51,6 +19,22 @@
  "https://github.com/n8n-io/n8n": {
   "pop": 149,
   "metric": "★ 149"
+ },
+ "https://huggingface.co/Qwen/Qwen3.8-27B": {
+  "pop": 20797,
+  "metric": "♥ 20,797 · 6.5M 다운로드"
+ },
+ "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF": {
+  "pop": 3010,
+  "metric": "♥ 3,010 · 7.6M 다운로드"
+ },
+ "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-MLX": {
+  "pop": 1094,
+  "metric": "♥ 1,094 · 69K 다운로드"
+ },
+ "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-FP8": {
+  "pop": 1147,
+  "metric": "♥ 1,147 · 250K 다운로드"
  },
  "https://huggingface.co/OBLITERATUS/Qwen3.8-27B-OBLITERATED": {
   "pop": 815,
@@ -133,8 +117,8 @@
   "metric": "♥ 668 · 431K 다운로드"
  },
  "https://github.com/jingyaogong/minimind": {
-  "pop": 301,
-  "metric": "★ 301"
+  "pop": 841,
+  "metric": "★ 841"
  },
  "https://github.com/Osmantic/ODS": {
   "pop": 77,
@@ -392,6 +376,10 @@
   "pop": 449,
   "metric": "★ 449"
  },
+ "https://github.com/harry0703/MoneyPrinterTurbo": {
+  "pop": 464,
+  "metric": "★ 464"
+ },
  "https://huggingface.co/Contrastive-LM/CLM-v0.1-8B": {
   "pop": 665,
   "metric": "♥ 665 · 3K 다운로드"
@@ -405,8 +393,8 @@
   "metric": "♥ 2,089 · 15K 다운로드"
  },
  "https://huggingface.co/Lightricks/LTX-2.5": {
-  "pop": 12555,
-  "metric": "♥ 12,555 · 2.9M 다운로드"
+  "pop": 12884,
+  "metric": "♥ 12,884 · 3M 다운로드"
  },
  "https://github.com/thedotmack/claude-mem": {
   "pop": 1165,
@@ -489,8 +477,8 @@
   "metric": "♥ 1,062 · 76K 다운로드"
  },
  "https://github.com/HKUDS/CLI-Anything": {
-  "pop": 899,
-  "metric": "★ 899"
+  "pop": 774,
+  "metric": "★ 774"
  },
  "https://github.com/ifixai-ai/iFixAi": {
   "pop": 2143,
@@ -789,8 +777,8 @@
   "metric": "♥ 478 · 2.3M 다운로드"
  },
  "https://github.com/elementalsouls/Claude-BugHunter": {
-  "pop": 1353,
-  "metric": "★ 1,353"
+  "pop": 1660,
+  "metric": "★ 1,660"
  },
  "https://github.com/mvanhorn/last30days-skill": {
   "pop": 1062,
@@ -801,8 +789,8 @@
   "metric": "★ 590"
  },
  "https://huggingface.co/higurashi-ai/Haru-4B": {
-  "pop": 3628,
-  "metric": "♥ 3,628 · 6K 다운로드"
+  "pop": 5329,
+  "metric": "♥ 5,329 · 7K 다운로드"
  },
  "https://huggingface.co/thinkingmachines/Inkling-2-Small": {
   "pop": 492,
@@ -817,12 +805,12 @@
   "metric": "★ 1,529"
  },
  "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted": {
-  "pop": 735,
-  "metric": "♥ 735 · 1K 다운로드"
+  "pop": 859,
+  "metric": "♥ 859 · 2K 다운로드"
  },
  "https://github.com/openvinotoolkit/openvino": {
-  "pop": 246,
-  "metric": "★ 246"
+  "pop": 219,
+  "metric": "★ 219"
  },
  "https://huggingface.co/tencent/Hy4-flash": {
   "pop": 342,
@@ -831,5 +819,9 @@
  "https://huggingface.co/apple/FastFrames-L": {
   "pop": 328,
   "metric": "♥ 328"
+ },
+ "https://huggingface.co/thinkingmachines/Inkling-2-Mini": {
+  "pop": 374,
+  "metric": "♥ 374 · 136 다운로드"
  }
 }
