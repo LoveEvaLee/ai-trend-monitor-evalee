@@ -1,44 +1,8 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-21 · URL별 최신값",
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-22 · URL별 최신값",
  "https://github.com/openai/codex": {
   "pop": 1994,
   "metric": "★ 1,994"
- },
- "https://github.com/affaan-m/ECC": {
-  "pop": 987,
-  "metric": "★ 987"
- },
- "https://github.com/obra/superpowers": {
-  "pop": 888,
-  "metric": "★ 888"
- },
- "https://github.com/Wei-Shaw/sub2api": {
-  "pop": 278,
-  "metric": "★ 278"
- },
- "https://github.com/n8n-io/n8n": {
-  "pop": 149,
-  "metric": "★ 149"
- },
- "https://huggingface.co/Qwen/Qwen3.8-27B": {
-  "pop": 20797,
-  "metric": "♥ 20,797 · 6.5M 다운로드"
- },
- "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF": {
-  "pop": 3010,
-  "metric": "♥ 3,010 · 7.6M 다운로드"
- },
- "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-MLX": {
-  "pop": 1094,
-  "metric": "♥ 1,094 · 69K 다운로드"
- },
- "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-FP8": {
-  "pop": 1147,
-  "metric": "♥ 1,147 · 250K 다운로드"
- },
- "https://huggingface.co/OBLITERATUS/Qwen3.8-27B-OBLITERATED": {
-  "pop": 815,
-  "metric": "♥ 815 · 469K 다운로드"
  },
  "https://github.com/freestylefly/awesome-gpt-image-2": {
   "pop": 4050,
@@ -55,6 +19,26 @@
  "https://github.com/tinyhumansai/openhuman": {
   "pop": 39,
   "metric": "★ 39"
+ },
+ "https://huggingface.co/Qwen/Qwen3.8-27B": {
+  "pop": 20797,
+  "metric": "♥ 20,797 · 6.5M 다운로드"
+ },
+ "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF": {
+  "pop": 3010,
+  "metric": "♥ 3,010 · 7.6M 다운로드"
+ },
+ "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-MLX": {
+  "pop": 1094,
+  "metric": "♥ 1,094 · 69K 다운로드"
+ },
+ "https://huggingface.co/OBLITERATUS/Qwen3.8-27B-OBLITERATED": {
+  "pop": 815,
+  "metric": "♥ 815 · 469K 다운로드"
+ },
+ "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-FP8": {
+  "pop": 1147,
+  "metric": "♥ 1,147 · 250K 다운로드"
  },
  "https://github.com/MadsLorentzen/ai-job-search": {
   "pop": 3890,
@@ -117,8 +101,8 @@
   "metric": "♥ 668 · 431K 다운로드"
  },
  "https://github.com/jingyaogong/minimind": {
-  "pop": 841,
-  "metric": "★ 841"
+  "pop": 488,
+  "metric": "★ 488"
  },
  "https://github.com/Osmantic/ODS": {
   "pop": 77,
@@ -127,6 +111,10 @@
  "https://github.com/Imbad0202/academic-research-skills": {
   "pop": 193,
   "metric": "★ 193"
+ },
+ "https://github.com/affaan-m/ECC": {
+  "pop": 987,
+  "metric": "★ 987"
  },
  "https://github.com/google-research/timesfm": {
   "pop": 343,
@@ -179,6 +167,10 @@
  "https://github.com/coreyhaines31/marketingskills": {
   "pop": 270,
   "metric": "★ 270"
+ },
+ "https://github.com/obra/superpowers": {
+  "pop": 884,
+  "metric": "★ 884"
  },
  "https://huggingface.co/openbmb/MiniCPM5-2B": {
   "pop": 1470,
@@ -477,8 +469,8 @@
   "metric": "♥ 1,062 · 76K 다운로드"
  },
  "https://github.com/HKUDS/CLI-Anything": {
-  "pop": 774,
-  "metric": "★ 774"
+  "pop": 767,
+  "metric": "★ 767"
  },
  "https://github.com/ifixai-ai/iFixAi": {
   "pop": 2143,
@@ -777,8 +769,8 @@
   "metric": "♥ 478 · 2.3M 다운로드"
  },
  "https://github.com/elementalsouls/Claude-BugHunter": {
-  "pop": 1660,
-  "metric": "★ 1,660"
+  "pop": 1794,
+  "metric": "★ 1,794"
  },
  "https://github.com/mvanhorn/last30days-skill": {
   "pop": 1062,
@@ -809,19 +801,27 @@
   "metric": "♥ 859 · 2K 다운로드"
  },
  "https://github.com/openvinotoolkit/openvino": {
-  "pop": 219,
-  "metric": "★ 219"
+  "pop": 202,
+  "metric": "★ 202"
  },
  "https://huggingface.co/tencent/Hy4-flash": {
-  "pop": 342,
-  "metric": "♥ 342 · 2K 다운로드"
+  "pop": 539,
+  "metric": "♥ 539 · 6K 다운로드"
  },
  "https://huggingface.co/apple/FastFrames-L": {
-  "pop": 328,
-  "metric": "♥ 328"
+  "pop": 490,
+  "metric": "♥ 490"
  },
  "https://huggingface.co/thinkingmachines/Inkling-2-Mini": {
-  "pop": 374,
-  "metric": "♥ 374 · 136 다운로드"
+  "pop": 2653,
+  "metric": "♥ 2,653 · 8K 다운로드"
+ },
+ "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF": {
+  "pop": 595,
+  "metric": "♥ 595 · 238K 다운로드"
+ },
+ "https://huggingface.co/inworld/voice-isolator": {
+  "pop": 505,
+  "metric": "♥ 505"
  }
 }
