@@ -1,24 +1,24 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-23 · URL별 최신값",
- "https://github.com/Alishahryar1/free-claude-code": {
-  "pop": 536,
-  "metric": "★ 536"
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-24 · URL별 최신값",
+ "https://github.com/freestylefly/awesome-gpt-image-2": {
+  "pop": 4050,
+  "metric": "★ 4,050"
  },
- "https://github.com/openai/codex": {
-  "pop": 1994,
-  "metric": "★ 1,994"
+ "https://github.com/anthropics/claude-plugins-community": {
+  "pop": 351,
+  "metric": "★ 351"
  },
  "https://github.com/MadsLorentzen/ai-job-search": {
   "pop": 3890,
   "metric": "★ 3,890"
  },
- "https://github.com/multica-ai/andrej-karpathy-skills": {
-  "pop": 588,
-  "metric": "★ 588"
+ "https://github.com/apache/maka": {
+  "pop": 543,
+  "metric": "★ 543"
  },
- "https://github.com/NousResearch/hermes-agent": {
-  "pop": 520,
-  "metric": "★ 520"
+ "https://github.com/TauricResearch/TradingAgents": {
+  "pop": 1376,
+  "metric": "★ 1,376"
  },
  "https://huggingface.co/Qwen/Qwen3.8-27B": {
   "pop": 20797,
@@ -40,22 +40,6 @@
   "pop": 1147,
   "metric": "♥ 1,147 · 250K 다운로드"
  },
- "https://github.com/freestylefly/awesome-gpt-image-2": {
-  "pop": 4050,
-  "metric": "★ 4,050"
- },
- "https://github.com/anthropics/claude-plugins-community": {
-  "pop": 351,
-  "metric": "★ 351"
- },
- "https://github.com/apache/maka": {
-  "pop": 543,
-  "metric": "★ 543"
- },
- "https://github.com/TauricResearch/TradingAgents": {
-  "pop": 1376,
-  "metric": "★ 1,376"
- },
  "https://github.com/tt-a1i/archify": {
   "pop": 3991,
   "metric": "★ 3,991"
@@ -63,6 +47,10 @@
  "https://github.com/anthropics/claude-plugins-official": {
   "pop": 1187,
   "metric": "★ 1,187"
+ },
+ "https://github.com/Alishahryar1/free-claude-code": {
+  "pop": 536,
+  "metric": "★ 536"
  },
  "https://huggingface.co/Qwen/Qwen3.8-Flash-Next": {
   "pop": 4947,
@@ -97,8 +85,8 @@
   "metric": "♥ 668 · 431K 다운로드"
  },
  "https://github.com/jingyaogong/minimind": {
-  "pop": 473,
-  "metric": "★ 473"
+  "pop": 828,
+  "metric": "★ 828"
  },
  "https://github.com/Osmantic/ODS": {
   "pop": 77,
@@ -123,6 +111,10 @@
  "https://github.com/ChromeDevTools/chrome-devtools-mcp": {
   "pop": 718,
   "metric": "★ 718"
+ },
+ "https://github.com/NousResearch/hermes-agent": {
+  "pop": 520,
+  "metric": "★ 520"
  },
  "https://github.com/superlinked/sie": {
   "pop": 60,
@@ -165,8 +157,8 @@
   "metric": "★ 270"
  },
  "https://github.com/obra/superpowers": {
-  "pop": 785,
-  "metric": "★ 785"
+  "pop": 838,
+  "metric": "★ 838"
  },
  "https://huggingface.co/openbmb/MiniCPM5-2B": {
   "pop": 1470,
@@ -465,8 +457,8 @@
   "metric": "♥ 1,062 · 76K 다운로드"
  },
  "https://github.com/HKUDS/CLI-Anything": {
-  "pop": 687,
-  "metric": "★ 687"
+  "pop": 783,
+  "metric": "★ 783"
  },
  "https://github.com/ifixai-ai/iFixAi": {
   "pop": 2143,
@@ -765,8 +757,8 @@
   "metric": "♥ 478 · 2.3M 다운로드"
  },
  "https://github.com/elementalsouls/Claude-BugHunter": {
-  "pop": 1721,
-  "metric": "★ 1,721"
+  "pop": 2037,
+  "metric": "★ 2,037"
  },
  "https://github.com/mvanhorn/last30days-skill": {
   "pop": 1062,
@@ -793,12 +785,12 @@
   "metric": "★ 1,529"
  },
  "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted": {
-  "pop": 991,
-  "metric": "♥ 991 · 3K 다운로드"
+  "pop": 1035,
+  "metric": "♥ 1,035 · 3K 다운로드"
  },
  "https://github.com/openvinotoolkit/openvino": {
-  "pop": 155,
-  "metric": "★ 155"
+  "pop": 183,
+  "metric": "★ 183"
  },
  "https://huggingface.co/tencent/Hy4-flash": {
   "pop": 620,
@@ -809,15 +801,19 @@
   "metric": "♥ 490"
  },
  "https://huggingface.co/thinkingmachines/Inkling-2-Mini": {
-  "pop": 4946,
-  "metric": "♥ 4,946 · 24K 다운로드"
+  "pop": 5478,
+  "metric": "♥ 5,478 · 42K 다운로드"
  },
  "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF": {
-  "pop": 872,
-  "metric": "♥ 872 · 806K 다운로드"
+  "pop": 1106,
+  "metric": "♥ 1,106 · 1.3M 다운로드"
  },
  "https://huggingface.co/inworld/voice-isolator": {
-  "pop": 632,
-  "metric": "♥ 632"
+  "pop": 731,
+  "metric": "♥ 731"
+ },
+ "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF": {
+  "pop": 644,
+  "metric": "♥ 644 · 329K 다운로드"
  }
 }
