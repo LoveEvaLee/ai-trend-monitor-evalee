@@ -1,44 +1,8 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-25 · URL별 최신값",
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-26 · URL별 최신값",
  "https://github.com/tt-a1i/archify": {
   "pop": 3991,
   "metric": "★ 3,991"
- },
- "https://github.com/freestylefly/awesome-gpt-image-2": {
-  "pop": 4050,
-  "metric": "★ 4,050"
- },
- "https://github.com/anthropics/claude-plugins-official": {
-  "pop": 1187,
-  "metric": "★ 1,187"
- },
- "https://github.com/Alishahryar1/free-claude-code": {
-  "pop": 536,
-  "metric": "★ 536"
- },
- "https://github.com/MadsLorentzen/ai-job-search": {
-  "pop": 3890,
-  "metric": "★ 3,890"
- },
- "https://huggingface.co/Qwen/Qwen3.8-Flash-Next": {
-  "pop": 4947,
-  "metric": "♥ 4,947 · 433K 다운로드"
- },
- "https://huggingface.co/Qwen/Qwen3.8-27B": {
-  "pop": 20797,
-  "metric": "♥ 20,797 · 6.5M 다운로드"
- },
- "https://huggingface.co/zai-org/GLM-5.3-Flash": {
-  "pop": 2044,
-  "metric": "♥ 2,044 · 655K 다운로드"
- },
- "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF": {
-  "pop": 3010,
-  "metric": "♥ 3,010 · 7.6M 다운로드"
- },
- "https://huggingface.co/OBLITERATUS/Qwen3.8-27B-OBLITERATED": {
-  "pop": 815,
-  "metric": "♥ 815 · 469K 다운로드"
  },
  "https://github.com/K-Dense-AI/scientific-agent-skills": {
   "pop": 879,
@@ -56,17 +20,29 @@
   "pop": 74,
   "metric": "★ 74"
  },
+ "https://huggingface.co/Qwen/Qwen3.8-Flash-Next": {
+  "pop": 4947,
+  "metric": "♥ 4,947 · 433K 다운로드"
+ },
+ "https://huggingface.co/zai-org/GLM-5.3-Flash": {
+  "pop": 2044,
+  "metric": "♥ 2,044 · 655K 다운로드"
+ },
  "https://huggingface.co/zai-org/GLM-5.3": {
   "pop": 1695,
   "metric": "♥ 1,695 · 304K 다운로드"
+ },
+ "https://huggingface.co/Qwen/Qwen3.8-27B": {
+  "pop": 20797,
+  "metric": "♥ 20,797 · 6.5M 다운로드"
  },
  "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF": {
   "pop": 668,
   "metric": "♥ 668 · 431K 다운로드"
  },
  "https://github.com/jingyaogong/minimind": {
-  "pop": 727,
-  "metric": "★ 727"
+  "pop": 828,
+  "metric": "★ 828"
  },
  "https://github.com/Osmantic/ODS": {
   "pop": 77,
@@ -137,8 +113,8 @@
   "metric": "★ 270"
  },
  "https://github.com/obra/superpowers": {
-  "pop": 1003,
-  "metric": "★ 1,003"
+  "pop": 902,
+  "metric": "★ 902"
  },
  "https://huggingface.co/openbmb/MiniCPM5-2B": {
   "pop": 1470,
@@ -308,6 +284,10 @@
   "pop": 354,
   "metric": "★ 354"
  },
+ "https://github.com/anthropics/claude-plugins-official": {
+  "pop": 1187,
+  "metric": "★ 1,187"
+ },
  "https://github.com/zhaoxuya520/reverse-skill": {
   "pop": 409,
   "metric": "★ 409"
@@ -437,8 +417,8 @@
   "metric": "♥ 1,062 · 76K 다운로드"
  },
  "https://github.com/HKUDS/CLI-Anything": {
-  "pop": 1074,
-  "metric": "★ 1,074"
+  "pop": 1094,
+  "metric": "★ 1,094"
  },
  "https://github.com/ifixai-ai/iFixAi": {
   "pop": 2143,
@@ -455,6 +435,10 @@
  "https://huggingface.co/fishaudio/drama-3": {
   "pop": 887,
   "metric": "♥ 887 · 15K 다운로드"
+ },
+ "https://github.com/MadsLorentzen/ai-job-search": {
+  "pop": 3890,
+  "metric": "★ 3,890"
  },
  "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017": {
   "pop": 5265,
@@ -741,8 +725,8 @@
   "metric": "♥ 478 · 2.3M 다운로드"
  },
  "https://github.com/elementalsouls/Claude-BugHunter": {
-  "pop": 1826,
-  "metric": "★ 1,826"
+  "pop": 1644,
+  "metric": "★ 1,644"
  },
  "https://github.com/mvanhorn/last30days-skill": {
   "pop": 1062,
@@ -773,8 +757,8 @@
   "metric": "♥ 1,073 · 4K 다운로드"
  },
  "https://github.com/openvinotoolkit/openvino": {
-  "pop": 185,
-  "metric": "★ 185"
+  "pop": 188,
+  "metric": "★ 188"
  },
  "https://huggingface.co/tencent/Hy4-flash": {
   "pop": 620,
@@ -785,19 +769,23 @@
   "metric": "♥ 490"
  },
  "https://huggingface.co/thinkingmachines/Inkling-2-Mini": {
-  "pop": 5789,
-  "metric": "♥ 5,789 · 69K 다운로드"
+  "pop": 6022,
+  "metric": "♥ 6,022 · 97K 다운로드"
  },
  "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF": {
-  "pop": 1258,
-  "metric": "♥ 1,258 · 1.9M 다운로드"
+  "pop": 1368,
+  "metric": "♥ 1,368 · 2.4M 다운로드"
  },
  "https://huggingface.co/inworld/voice-isolator": {
-  "pop": 818,
-  "metric": "♥ 818 · 13K 다운로드"
+  "pop": 893,
+  "metric": "♥ 893 · 15K 다운로드"
  },
  "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF": {
-  "pop": 758,
-  "metric": "♥ 758 · 574K 다운로드"
+  "pop": 838,
+  "metric": "♥ 838 · 762K 다운로드"
+ },
+ "https://huggingface.co/SulphurAI/Sulphur-3": {
+  "pop": 1069,
+  "metric": "♥ 1,069 · 190K 다운로드"
  }
 }
