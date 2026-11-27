@@ -1,5 +1,5 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-26 · URL별 최신값",
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-27 · URL별 최신값",
  "https://github.com/tt-a1i/archify": {
   "pop": 3991,
   "metric": "★ 3,991"
@@ -41,8 +41,8 @@
   "metric": "♥ 668 · 431K 다운로드"
  },
  "https://github.com/jingyaogong/minimind": {
-  "pop": 828,
-  "metric": "★ 828"
+  "pop": 701,
+  "metric": "★ 701"
  },
  "https://github.com/Osmantic/ODS": {
   "pop": 77,
@@ -113,8 +113,8 @@
   "metric": "★ 270"
  },
  "https://github.com/obra/superpowers": {
-  "pop": 902,
-  "metric": "★ 902"
+  "pop": 853,
+  "metric": "★ 853"
  },
  "https://huggingface.co/openbmb/MiniCPM5-2B": {
   "pop": 1470,
@@ -417,8 +417,8 @@
   "metric": "♥ 1,062 · 76K 다운로드"
  },
  "https://github.com/HKUDS/CLI-Anything": {
-  "pop": 1094,
-  "metric": "★ 1,094"
+  "pop": 744,
+  "metric": "★ 744"
  },
  "https://github.com/ifixai-ai/iFixAi": {
   "pop": 2143,
@@ -725,8 +725,8 @@
   "metric": "♥ 478 · 2.3M 다운로드"
  },
  "https://github.com/elementalsouls/Claude-BugHunter": {
-  "pop": 1644,
-  "metric": "★ 1,644"
+  "pop": 1600,
+  "metric": "★ 1,600"
  },
  "https://github.com/mvanhorn/last30days-skill": {
   "pop": 1062,
@@ -757,8 +757,8 @@
   "metric": "♥ 1,073 · 4K 다운로드"
  },
  "https://github.com/openvinotoolkit/openvino": {
-  "pop": 188,
-  "metric": "★ 188"
+  "pop": 176,
+  "metric": "★ 176"
  },
  "https://huggingface.co/tencent/Hy4-flash": {
   "pop": 620,
@@ -769,23 +769,23 @@
   "metric": "♥ 490"
  },
  "https://huggingface.co/thinkingmachines/Inkling-2-Mini": {
-  "pop": 6022,
-  "metric": "♥ 6,022 · 97K 다운로드"
+  "pop": 6239,
+  "metric": "♥ 6,239 · 97K 다운로드"
  },
  "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF": {
-  "pop": 1368,
-  "metric": "♥ 1,368 · 2.4M 다운로드"
+  "pop": 1491,
+  "metric": "♥ 1,491 · 2.4M 다운로드"
  },
  "https://huggingface.co/inworld/voice-isolator": {
-  "pop": 893,
-  "metric": "♥ 893 · 15K 다운로드"
+  "pop": 960,
+  "metric": "♥ 960 · 15K 다운로드"
  },
  "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF": {
-  "pop": 838,
-  "metric": "♥ 838 · 762K 다운로드"
+  "pop": 931,
+  "metric": "♥ 931 · 762K 다운로드"
  },
  "https://huggingface.co/SulphurAI/Sulphur-3": {
-  "pop": 1069,
-  "metric": "♥ 1,069 · 190K 다운로드"
+  "pop": 1211,
+  "metric": "♥ 1,211 · 190K 다운로드"
  }
 }
