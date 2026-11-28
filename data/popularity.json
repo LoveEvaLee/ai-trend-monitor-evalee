@@ -1,5 +1,9 @@
 {
- "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-27 · URL별 최신값",
+ "_comment": "아르고스 랭킹(_data/rankings)에서 자동 생성 · 2026-11-28 · URL별 최신값",
+ "https://github.com/THU-MAIC/OpenMAIC": {
+  "pop": 3128,
+  "metric": "★ 3,128"
+ },
  "https://github.com/tt-a1i/archify": {
   "pop": 3991,
   "metric": "★ 3,991"
@@ -8,17 +12,13 @@
   "pop": 879,
   "metric": "★ 879"
  },
- "https://github.com/THU-MAIC/OpenMAIC": {
-  "pop": 3128,
-  "metric": "★ 3,128"
+ "https://github.com/jingyaogong/minimind": {
+  "pop": 667,
+  "metric": "★ 667"
  },
- "https://github.com/JetBrains/go-modern-guidelines": {
-  "pop": 294,
-  "metric": "★ 294"
- },
- "https://github.com/ComposioHQ/awesome-claude-skills": {
-  "pop": 74,
-  "metric": "★ 74"
+ "https://github.com/Osmantic/ODS": {
+  "pop": 77,
+  "metric": "★ 77"
  },
  "https://huggingface.co/Qwen/Qwen3.8-Flash-Next": {
   "pop": 4947,
@@ -39,14 +39,6 @@
  "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF": {
   "pop": 668,
   "metric": "♥ 668 · 431K 다운로드"
- },
- "https://github.com/jingyaogong/minimind": {
-  "pop": 701,
-  "metric": "★ 701"
- },
- "https://github.com/Osmantic/ODS": {
-  "pop": 77,
-  "metric": "★ 77"
  },
  "https://github.com/Imbad0202/academic-research-skills": {
   "pop": 193,
@@ -113,8 +105,8 @@
   "metric": "★ 270"
  },
  "https://github.com/obra/superpowers": {
-  "pop": 853,
-  "metric": "★ 853"
+  "pop": 916,
+  "metric": "★ 916"
  },
  "https://huggingface.co/openbmb/MiniCPM5-2B": {
   "pop": 1470,
@@ -417,8 +409,8 @@
   "metric": "♥ 1,062 · 76K 다운로드"
  },
  "https://github.com/HKUDS/CLI-Anything": {
-  "pop": 744,
-  "metric": "★ 744"
+  "pop": 668,
+  "metric": "★ 668"
  },
  "https://github.com/ifixai-ai/iFixAi": {
   "pop": 2143,
@@ -725,8 +717,8 @@
   "metric": "♥ 478 · 2.3M 다운로드"
  },
  "https://github.com/elementalsouls/Claude-BugHunter": {
-  "pop": 1600,
-  "metric": "★ 1,600"
+  "pop": 1615,
+  "metric": "★ 1,615"
  },
  "https://github.com/mvanhorn/last30days-skill": {
   "pop": 1062,
@@ -757,8 +749,8 @@
   "metric": "♥ 1,073 · 4K 다운로드"
  },
  "https://github.com/openvinotoolkit/openvino": {
-  "pop": 176,
-  "metric": "★ 176"
+  "pop": 152,
+  "metric": "★ 152"
  },
  "https://huggingface.co/tencent/Hy4-flash": {
   "pop": 620,
@@ -769,23 +761,27 @@
   "metric": "♥ 490"
  },
  "https://huggingface.co/thinkingmachines/Inkling-2-Mini": {
-  "pop": 6239,
-  "metric": "♥ 6,239 · 97K 다운로드"
+  "pop": 6461,
+  "metric": "♥ 6,461 · 156K 다운로드"
  },
  "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF": {
-  "pop": 1491,
-  "metric": "♥ 1,491 · 2.4M 다운로드"
+  "pop": 1605,
+  "metric": "♥ 1,605 · 3.3M 다운로드"
  },
  "https://huggingface.co/inworld/voice-isolator": {
   "pop": 960,
   "metric": "♥ 960 · 15K 다운로드"
  },
  "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF": {
-  "pop": 931,
-  "metric": "♥ 931 · 762K 다운로드"
+  "pop": 1035,
+  "metric": "♥ 1,035 · 1.1M 다운로드"
  },
  "https://huggingface.co/SulphurAI/Sulphur-3": {
-  "pop": 1211,
-  "metric": "♥ 1,211 · 190K 다운로드"
+  "pop": 1367,
+  "metric": "♥ 1,367 · 539K 다운로드"
+ },
+ "https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF": {
+  "pop": 634,
+  "metric": "♥ 634 · 383K 다운로드"
  }
 }
